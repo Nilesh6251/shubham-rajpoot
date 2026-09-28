@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shubham Rajpoot | Cyber Neo-Brutalist Developer & Web Engineering Portfolio</title>
-  <meta name="description" content="Portfolio of Shubham Rajpoot — IT Student, Web Developer, C++ Programmer & Problem Solver. Generative AI & HackerRank Certified." />
+  <title>Shubham Rajpoot | Web Developer &amp; C++ Programmer Portfolio</title>
+  <meta name="description" content="Portfolio of Shubham Rajpoot — B.Tech IT Student, Web Developer, C++ Programmer &amp; Problem Solver. Certified in Generative AI &amp; HackerRank Problem Solving." />
   <meta name="keywords" content="Shubham Rajpoot, Web Developer, C++, Python, JavaScript, LeetCode, HackerRank, Generative AI, Portfolio" />
   <meta name="author" content="Shubham Rajpoot" />
 
-  <!-- Google Fonts: Space Grotesk, JetBrains Mono & Syne -->
+  <!-- Google Fonts: Plus Jakarta Sans, JetBrains Mono & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,46 +19,43 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Canvas Confetti CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            obsidian: '#0a0a0e',
-            surface: '#12131a',
-            surfaceLight: '#1a1b26',
-            electricBlue: '#3b82f6',
-            cyberPurple: '#8b5cf6',
+            voidDark: '#06090e',
+            canvas: '#090d16',
+            cardBg: '#0e1524',
+            cardHover: '#131c30',
+            neonEmerald: '#10b981',
+            mintLight: '#34d399',
+            hyperCyan: '#06b6d4',
+            laserTeal: '#14b8a6',
             amberGold: '#f59e0b',
-            crimsonRed: '#ef4444',
-            cyberCyan: '#06b6d4',
+            crimsonRed: '#f43f5e',
+            neonPurple: '#a855f7',
           },
           fontFamily: {
-            display: ['Syne', 'sans-serif'],
-            sans: ['Space Grotesk', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           },
           boxShadow: {
-            'brutal-sm': '3px 3px 0px #000000',
-            'brutal': '5px 5px 0px #000000',
-            'brutal-lg': '6px 6px 0px #000000',
-            'brutal-xl': '8px 8px 0px #000000',
-            'brutal-blue': '6px 6px 0px #3b82f6',
-            'brutal-purple': '6px 6px 0px #8b5cf6',
-            'brutal-amber': '6px 6px 0px #f59e0b',
-            'brutal-cyan': '6px 6px 0px #06b6d4',
+            'glow-emerald': '0 0 25px rgba(16, 185, 129, 0.25)',
+            'glow-cyan': '0 0 25px rgba(6, 182, 212, 0.25)',
+            'glow-emerald-lg': '0 0 45px rgba(16, 185, 129, 0.35)',
+            'card-glass': '0 10px 30px -10px rgba(0, 0, 0, 0.5)',
           },
           animation: {
-            'marquee': 'marquee 25s linear infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
           },
           keyframes: {
-            marquee: {
-              '0%': { transform: 'translateX(0%)' },
-              '100%': { transform: 'translateX(-50%)' },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
             }
           }
         }
@@ -68,154 +65,107 @@
 
   <style>
     :root {
-      --bg-dark: #0a0a0e;
+      --bg-dark: #06090e;
     }
 
     body {
       background-color: var(--bg-dark);
       color: #f1f5f9;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
 
     ::selection {
-      background-color: #3b82f6;
+      background-color: #10b981;
+      color: #06090e;
+    }
+
+    /* High-Tech Circuit Grid Background */
+    .circuit-grid {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+    }
+
+    /* Glassmorphic Panels */
+    .glass-panel {
+      background: rgba(14, 21, 36, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(16, 185, 129, 0.18);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-panel:hover {
+      border-color: rgba(16, 185, 129, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px -10px rgba(16, 185, 129, 0.2);
+    }
+
+    .glass-panel-cyan {
+      background: rgba(14, 21, 36, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-panel-cyan:hover {
+      border-color: rgba(6, 182, 212, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px -10px rgba(6, 182, 212, 0.2);
+    }
+
+    /* Emerald Neon Buttons */
+    .btn-emerald-neon {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #06090e;
+      font-weight: 800;
+      border: 1px solid #34d399;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-emerald-neon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.7);
+      background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    }
+
+    .btn-glass-teal {
+      background: rgba(20, 184, 166, 0.1);
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      color: #5eead4;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+    .btn-glass-teal:hover {
+      background: rgba(20, 184, 166, 0.2);
+      border-color: #2dd4bf;
       color: #ffffff;
-    }
-
-    /* Cyber Dot Matrix Backdrop */
-    .cyber-dot-matrix {
-      background-image: radial-gradient(rgba(59, 130, 246, 0.12) 1.5px, transparent 1.5px);
-      background-size: 26px 26px;
-    }
-
-    /* Neo-Brutalist Border Utilities */
-    .border-2\.5 {
-      border-width: 2.5px;
-    }
-    .border-3 {
-      border-width: 3px;
-    }
-
-    /* Neo-Brutalist Cards */
-    .brutal-card {
-      background-color: #12131a;
-      border: 2.5px solid #000000;
-      box-shadow: 5px 5px 0px #000000;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .brutal-card:hover {
-      transform: translate(-3px, -3px);
-      box-shadow: 8px 8px 0px #3b82f6;
-    }
-
-    .brutal-card-blue {
-      background-color: #12131a;
-      border: 2.5px solid #000000;
-      box-shadow: 5px 5px 0px #3b82f6;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .brutal-card-blue:hover {
-      transform: translate(-3px, -3px);
-      box-shadow: 8px 8px 0px #06b6d4;
-    }
-
-    .brutal-card-purple {
-      background-color: #12131a;
-      border: 2.5px solid #000000;
-      box-shadow: 5px 5px 0px #8b5cf6;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .brutal-card-purple:hover {
-      transform: translate(-3px, -3px);
-      box-shadow: 8px 8px 0px #3b82f6;
-    }
-
-    .brutal-card-amber {
-      background-color: #12131a;
-      border: 2.5px solid #000000;
-      box-shadow: 5px 5px 0px #f59e0b;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .brutal-card-amber:hover {
-      transform: translate(-3px, -3px);
-      box-shadow: 8px 8px 0px #3b82f6;
-    }
-
-    /* Neo-Brutalist Buttons */
-    .btn-brutal-blue {
-      background-color: #3b82f6;
-      color: #ffffff;
-      border: 2.5px solid #000000;
-      box-shadow: 4px 4px 0px #000000;
-      transition: all 0.15s ease-in-out;
-    }
-    .btn-brutal-blue:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0px #8b5cf6;
-      background-color: #2563eb;
-    }
-    .btn-brutal-blue:active {
-      transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0px #000000;
-    }
-
-    .btn-brutal-purple {
-      background-color: #8b5cf6;
-      color: #ffffff;
-      border: 2.5px solid #000000;
-      box-shadow: 4px 4px 0px #000000;
-      transition: all 0.15s ease-in-out;
-    }
-    .btn-brutal-purple:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0px #3b82f6;
-      background-color: #7c3aed;
-    }
-    .btn-brutal-purple:active {
-      transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0px #000000;
-    }
-
-    .btn-brutal-cyan {
-      background-color: #06b6d4;
-      color: #000000;
-      border: 2.5px solid #000000;
-      box-shadow: 4px 4px 0px #000000;
-      transition: all 0.15s ease-in-out;
-    }
-    .btn-brutal-cyan:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0px #3b82f6;
-      background-color: #0891b2;
-      color: #ffffff;
-    }
-    .btn-brutal-cyan:active {
-      transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0px #000000;
+      box-shadow: 0 0 20px rgba(20, 184, 166, 0.35);
+      transform: translateY(-2px);
     }
 
     /* Terminal Custom Scroll */
     .terminal-scroll::-webkit-scrollbar {
-      width: 6px;
+      width: 5px;
     }
     .terminal-scroll::-webkit-scrollbar-track {
-      background: #0a0a0e;
+      background: #06090e;
     }
     .terminal-scroll::-webkit-scrollbar-thumb {
-      background: #27273a;
-      border-radius: 0px;
+      background: #1e293b;
+      border-radius: 4px;
     }
     .terminal-scroll::-webkit-scrollbar-thumb:hover {
-      background: #3b82f6;
+      background: #10b981;
     }
 
-    /* Blinking Caret */
-    .cursor-blink {
+    /* Glowing Caret */
+    .emerald-caret {
       display: inline-block;
       width: 8px;
-      height: 18px;
-      background-color: #3b82f6;
+      height: 16px;
+      background-color: #10b981;
       vertical-align: middle;
       animation: blink 0.9s steps(2, start) infinite;
     }
@@ -225,87 +175,59 @@
     }
   </style>
 </head>
-<body class="bg-obsidian text-slate-100 min-h-screen cyber-dot-matrix relative antialiased">
+<body class="bg-voidDark text-slate-100 min-h-screen circuit-grid relative antialiased">
 
-  <!-- Ambient Glow Backdrops -->
-  <div class="fixed top-10 left-10 w-96 h-96 bg-electricBlue/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-  <div class="fixed top-1/2 right-10 w-96 h-96 bg-cyberPurple/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
-  <div class="fixed bottom-10 left-1/3 w-80 h-80 bg-amberGold/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+  <!-- Ambient Glowing Orbs (Emerald, Cyan & Mint) -->
+  <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-neonEmerald/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+  <div class="fixed top-1/3 right-10 w-[450px] h-[450px] bg-hyperCyan/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 left-10 w-[400px] h-[400px] bg-laserTeal/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
 
-  <!-- Top Announcement Marquee Ticker -->
-  <div class="bg-electricBlue text-white border-b-2.5 border-black font-mono text-xs font-bold py-1.5 overflow-hidden whitespace-nowrap select-none">
-    <div class="inline-block animate-marquee uppercase tracking-wider">
-      <span>⚡ SHUBHAM RAJPOOT // WEB DEVELOPER &amp; C++ PROGRAMMER</span>
-      <span class="mx-4 font-black">///</span>
-      <span>GENERATIVE AI CERTIFIED (JUNE 2025)</span>
-      <span class="mx-4 font-black">///</span>
-      <span>HACKERRANK PROBLEM SOLVING CERTIFICATE (MARCH 2025)</span>
-      <span class="mx-4 font-black">///</span>
-      <span>CODEALPHA CERTIFIED</span>
-      <span class="mx-4 font-black">///</span>
-      <span>B.TECH IT (CGPA: 6.0 / 10 TILL 3RD SEM)</span>
-      <span class="mx-4 font-black">///</span>
-      <span>EMAIL: SHUBHAMRAJPOOT505@GMAIL.COM</span>
-      <span class="mx-4 font-black">///</span>
-      <span>PHONE: +91 9301149634</span>
-      <span class="mx-4 font-black">///</span>
-      <span>ACTIVE ON LEETCODE &amp; HACKERRANK</span>
-      <span class="mx-4 font-black">///</span>
-      <span>⚡ SHUBHAM RAJPOOT // WEB DEVELOPER &amp; C++ PROGRAMMER</span>
-      <span class="mx-4 font-black">///</span>
-    </div>
-  </div>
-
-  <!-- Sticky Header Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-obsidian/90 border-b-2.5 border-black px-4 sm:px-8 py-3.5">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <!-- FLOATING GLASS NAVBAR -->
+  <header class="sticky top-4 z-50 px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto bg-slate-950/80 backdrop-blur-xl border border-emerald-500/20 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl">
       
-      <!-- Logo Badge -->
+      <!-- Brand Logo -->
       <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-electricBlue text-white border-2 border-black font-mono font-black flex items-center justify-center text-base shadow-brutal-sm group-hover:-translate-y-0.5 transition-transform">
-          SR
+        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 p-[1.5px] shadow-glow-emerald">
+          <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center font-mono font-black text-emerald-400 text-xs group-hover:text-white transition-colors">
+            SR
+          </div>
         </div>
         <div>
-          <div class="font-display font-black tracking-tight text-lg sm:text-xl flex items-center gap-1.5 text-white">
-            SHUBHAM<span class="text-electricBlue">.DEV</span>
-            <span class="hidden md:inline-block text-[10px] font-mono bg-surfaceLight text-cyberCyan px-2 py-0.5 border border-black font-bold uppercase">
-              B.TECH IT
-            </span>
+          <div class="font-display font-extrabold tracking-tight text-base flex items-center gap-1 text-white">
+            SHUBHAM<span class="text-neonEmerald">.DEV</span>
           </div>
-          <p class="text-[11px] font-mono text-slate-400 -mt-0.5 hidden sm:block">
-            Web Developer &amp; C++ Programmer
-          </p>
         </div>
       </a>
 
-      <!-- Desktop Nav Links (Neo-Brutalist Buttons) -->
-      <nav class="hidden lg:flex items-center gap-2.5 font-mono text-xs font-bold">
-        <a href="#about" class="px-3.5 py-1.5 bg-surface border-2 border-black shadow-brutal-sm text-slate-200 hover:text-white hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-blue transition-all flex items-center gap-1.5">
-          <span class="text-electricBlue font-black">01.</span> ABOUT
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 font-mono text-xs font-semibold">
+        <a href="#about" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 transition-all">
+          // about
         </a>
-        <a href="#education" class="px-3.5 py-1.5 bg-surface border-2 border-black shadow-brutal-sm text-slate-200 hover:text-white hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-blue transition-all flex items-center gap-1.5">
-          <span class="text-cyberCyan font-black">02.</span> EDUCATION
+        <a href="#education" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 transition-all">
+          // education
         </a>
-        <a href="#skills" class="px-3.5 py-1.5 bg-surface border-2 border-black shadow-brutal-sm text-slate-200 hover:text-white hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-blue transition-all flex items-center gap-1.5">
-          <span class="text-cyberPurple font-black">03.</span> SKILLS
+        <a href="#skills" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 transition-all">
+          // skills
         </a>
-        <a href="#projects" class="px-3.5 py-1.5 bg-surface border-2 border-black shadow-brutal-sm text-slate-200 hover:text-white hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-blue transition-all flex items-center gap-1.5">
-          <span class="text-amberGold font-black">04.</span> PROJECTS
+        <a href="#projects" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 transition-all">
+          // projects
         </a>
-        <a href="#certifications" class="px-3.5 py-1.5 bg-surface border-2 border-black shadow-brutal-sm text-slate-200 hover:text-white hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-blue transition-all flex items-center gap-1.5">
-          <span class="text-electricBlue font-black">05.</span> CERTS
+        <a href="#certifications" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 transition-all">
+          // certs
         </a>
-        <a href="#contact" class="px-3.5 py-1.5 bg-surface border-2 border-black shadow-brutal-sm text-slate-200 hover:text-white hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-blue transition-all flex items-center gap-1.5">
-          <span class="text-cyberCyan font-black">06.</span> CONTACT
+        <a href="#contact" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-emerald-300 hover:bg-emerald-950/40 transition-all">
+          // contact
         </a>
       </nav>
 
       <!-- Right CTAs -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5">
         <a 
           href="resume.pdf" 
           download="Shubham_Rajpoot_Resume.pdf"
-          class="btn-brutal-blue px-4 py-2 font-mono text-xs font-bold flex items-center gap-1.5"
+          class="btn-emerald-neon px-4 py-1.5 rounded-full font-mono text-xs flex items-center gap-1.5 shadow-glow-emerald"
         >
           <i data-lucide="download" class="w-3.5 h-3.5"></i>
           <span>RESUME</span>
@@ -315,266 +237,249 @@
           href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn-brutal-purple hidden sm:flex items-center gap-1.5 px-4 py-2 font-mono text-xs font-bold"
+          class="btn-glass-teal hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full font-mono text-xs"
         >
           <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
           <span>CONNECT</span>
         </a>
 
-        <!-- Mobile Menu Toggle Button -->
         <button 
           id="mobileMenuToggle" 
-          class="lg:hidden p-2 bg-surface border-2 border-black text-slate-300 shadow-brutal-sm hover:text-white"
-          aria-label="Toggle Navigation Menu"
+          class="md:hidden p-2 rounded-full bg-slate-900 border border-emerald-500/30 text-slate-300"
+          aria-label="Toggle navigation menu"
         >
-          <i data-lucide="menu" class="w-5 h-5"></i>
+          <i data-lucide="menu" class="w-4 h-4"></i>
         </button>
       </div>
 
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobileDrawer" class="hidden lg:hidden mt-3 pt-3 border-t-2 border-black flex flex-col gap-2 font-mono text-xs">
-      <a href="#about" class="px-3.5 py-2.5 bg-surface border-2 border-black text-slate-200 shadow-brutal-sm font-bold flex items-center gap-2">
-        <span class="text-electricBlue">01.</span> ABOUT
-      </a>
-      <a href="#education" class="px-3.5 py-2.5 bg-surface border-2 border-black text-slate-200 shadow-brutal-sm font-bold flex items-center gap-2">
-        <span class="text-cyberCyan">02.</span> EDUCATION
-      </a>
-      <a href="#skills" class="px-3.5 py-2.5 bg-surface border-2 border-black text-slate-200 shadow-brutal-sm font-bold flex items-center gap-2">
-        <span class="text-cyberPurple">03.</span> SKILLS
-      </a>
-      <a href="#projects" class="px-3.5 py-2.5 bg-surface border-2 border-black text-slate-200 shadow-brutal-sm font-bold flex items-center gap-2">
-        <span class="text-amberGold">04.</span> PROJECTS
-      </a>
-      <a href="#certifications" class="px-3.5 py-2.5 bg-surface border-2 border-black text-slate-200 shadow-brutal-sm font-bold flex items-center gap-2">
-        <span class="text-electricBlue">05.</span> CERTS
-      </a>
-      <a href="#contact" class="px-3.5 py-2.5 bg-surface border-2 border-black text-slate-200 shadow-brutal-sm font-bold flex items-center gap-2">
-        <span class="text-cyberCyan">06.</span> CONTACT
-      </a>
-      <div class="pt-2">
-        <a 
-          href="resume.pdf" 
-          download="Shubham_Rajpoot_Resume.pdf"
-          class="w-full py-2.5 btn-brutal-blue flex items-center justify-center gap-2 font-bold"
-        >
-          <i data-lucide="download" class="w-4 h-4"></i> DOWNLOAD RESUME
-        </a>
-      </div>
+    <div id="mobileDrawer" class="hidden md:hidden mt-2 p-4 bg-slate-950/95 backdrop-blur-xl border border-emerald-500/30 rounded-2xl flex flex-col gap-2 font-mono text-xs">
+      <a href="#about" class="px-3 py-2 rounded-lg text-slate-200 hover:bg-emerald-950/40 hover:text-emerald-300">01. About</a>
+      <a href="#education" class="px-3 py-2 rounded-lg text-slate-200 hover:bg-emerald-950/40 hover:text-emerald-300">02. Education</a>
+      <a href="#skills" class="px-3 py-2 rounded-lg text-slate-200 hover:bg-emerald-950/40 hover:text-emerald-300">03. Skills</a>
+      <a href="#projects" class="px-3 py-2 rounded-lg text-slate-200 hover:bg-emerald-950/40 hover:text-emerald-300">04. Projects</a>
+      <a href="#certifications" class="px-3 py-2 rounded-lg text-slate-200 hover:bg-emerald-950/40 hover:text-emerald-300">05. Certifications</a>
+      <a href="#contact" class="px-3 py-2 rounded-lg text-slate-200 hover:bg-emerald-950/40 hover:text-emerald-300">06. Contact</a>
     </div>
   </header>
 
-  <!-- MAIN WRAPPER -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-14 space-y-24">
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-20 sm:space-y-28">
 
     <!-- 1. HERO SECTION -->
-    <section id="hero" class="relative">
+    <section id="hero" class="relative pt-4 sm:pt-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- Left Hero Content -->
+        <!-- Left Hero Details -->
         <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Live Radar Availability Badge -->
+          <div className="inline-flex" style="display: inline-flex;">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 shadow-glow-emerald backdrop-blur-md">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span class="text-xs font-mono font-medium text-emerald-300 tracking-wide">
+                Available for Web Developer &amp; C++ Roles
+              </span>
+            </div>
+          </div>
+
+          <!-- Main Headline -->
           <div class="space-y-2">
-            <p class="font-mono text-xs tracking-widest text-slate-400 uppercase font-bold flex items-center gap-2">
-              <span class="text-electricBlue font-black">&gt;&gt;&gt;</span> DEVELOPER PORTFOLIO
-            </p>
-            <h1 class="text-4xl sm:text-6xl xl:text-7xl font-display font-black tracking-tight leading-[0.95] text-white">
+            <h1 class="text-4xl sm:text-6xl xl:text-7xl font-display font-extrabold tracking-tight text-white leading-[1.05]">
               SHUBHAM <br />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-electricBlue via-cyberPurple to-cyberCyan drop-shadow-[4px_4px_0px_#000000]">
+              <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 text-transparent bg-clip-text">
                 RAJPOOT
               </span>
             </h1>
-            <p class="text-base sm:text-lg font-mono font-bold text-cyberCyan pt-1 flex items-center gap-2 flex-wrap">
-              <span>IT Student</span>
-              <span class="text-slate-500">•</span>
-              <span class="text-electricBlue">Web Developer</span>
-              <span class="text-slate-500">•</span>
-              <span class="text-cyberPurple">C++ Programmer</span>
+            <p class="text-base sm:text-lg font-mono font-semibold text-slate-300 flex items-center gap-2 flex-wrap">
+              <span class="text-emerald-400">IT Student</span>
+              <span class="text-slate-600">&bull;</span>
+              <span class="text-teal-300">Web Developer</span>
+              <span class="text-slate-600">&bull;</span>
+              <span class="text-cyan-400">C++ Programmer</span>
             </p>
           </div>
 
-          <!-- Quick Neo Pill Badges -->
-          <div class="flex flex-wrap gap-2.5 pt-1 font-mono text-xs">
-            <span class="px-3 py-1.5 bg-surface border-2 border-black text-cyberCyan font-bold shadow-brutal-sm flex items-center gap-1.5 hover:-translate-y-0.5 transition-transform">
-              <i data-lucide="layout" class="w-3.5 h-3.5"></i> Web Dev (HTML, CSS, JS)
+          <!-- Tech Pills -->
+          <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+            <span class="px-3 py-1.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="layout" class="w-3.5 h-3.5 text-emerald-400"></i> HTML, CSS &amp; JavaScript
             </span>
-            <span class="px-3 py-1.5 bg-surface border-2 border-black text-electricBlue font-bold shadow-brutal-sm flex items-center gap-1.5 hover:-translate-y-0.5 transition-transform">
-              <i data-lucide="cpu" class="w-3.5 h-3.5"></i> C, C++ &amp; Python
+            <span class="px-3 py-1.5 rounded-xl bg-teal-950/40 border border-teal-500/30 text-teal-300 flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="cpu" class="w-3.5 h-3.5 text-teal-400"></i> C, C++ &amp; Python
             </span>
-            <span class="px-3 py-1.5 bg-surface border-2 border-black text-cyberPurple font-bold shadow-brutal-sm flex items-center gap-1.5 hover:-translate-y-0.5 transition-transform">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Generative AI Certified
+            <span class="px-3 py-1.5 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-cyan-300 flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i> Generative AI Certified
             </span>
-            <span class="px-3 py-1.5 bg-surface border-2 border-black text-amberGold font-bold shadow-brutal-sm flex items-center gap-1.5 hover:-translate-y-0.5 transition-transform">
-              <i data-lucide="code-2" class="w-3.5 h-3.5"></i> HackerRank &amp; LeetCode
+            <span class="px-3 py-1.5 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-amber-400"></i> HackerRank &amp; LeetCode
             </span>
           </div>
 
-          <!-- Hero Bio Description (Exact Career Objective) -->
-          <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-sans border-l-4 border-electricBlue pl-4 py-1.5 bg-surface/60">
-            Motivated and enthusiastic <strong class="text-white font-bold">B.Tech Information Technology student</strong> with strong fundamentals in 
-            <strong class="text-electricBlue font-bold">programming languages (C, C++, Python)</strong> and 
-            <strong class="text-cyberCyan font-bold">web development (HTML, CSS, JavaScript)</strong>. 
+          <!-- Narrative Bio (Resume Career Objective) -->
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-sans border-l-2 border-emerald-500 pl-4 py-1.5 bg-slate-900/40 rounded-r-2xl">
+            Motivated and enthusiastic <strong class="text-white font-semibold">B.Tech Information Technology student</strong> with strong fundamentals in 
+            <strong class="text-emerald-300 font-semibold">programming languages (C, C++, Python)</strong> and 
+            <strong class="text-teal-300 font-semibold">web development (HTML, CSS, JavaScript)</strong>. 
             Seeking opportunities to enhance technical skills, gain practical experience, and contribute to innovative projects.
           </p>
 
           <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2 font-mono">
-            <a href="#projects" class="btn-brutal-blue px-6 py-3.5 text-sm sm:text-base font-bold flex items-center gap-2">
-              <i data-lucide="folder-code" class="w-4 h-4"></i>
-              <span>VIEW PROJECTS</span>
+          <div class="flex flex-wrap items-center gap-3.5 pt-2 font-mono">
+            <a 
+              href="#projects" 
+              class="btn-emerald-neon px-6 py-3.5 rounded-2xl text-sm font-bold flex items-center gap-2"
+            >
+              <span>EXPLORE PROJECTS</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
 
             <a 
-              href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365" 
-              target="_blank" 
+              href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365"
+              target="_blank"
               rel="noopener noreferrer"
-              class="btn-brutal-purple px-6 py-3.5 text-sm sm:text-base font-bold flex items-center gap-2"
+              class="btn-glass-teal px-5 py-3.5 rounded-2xl text-sm font-semibold flex items-center gap-2"
             >
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
-              <span>CONNECT LINKEDIN</span>
+              <i data-lucide="linkedin" class="w-4 h-4 text-teal-400"></i>
+              <span>LINKEDIN</span>
             </a>
 
             <button 
               onclick="copyEmail()" 
-              class="px-4 py-3.5 bg-surface border-2 border-black font-mono text-xs sm:text-sm font-bold shadow-brutal hover:-translate-y-0.5 hover:shadow-brutal-blue transition-all flex items-center gap-2 text-slate-300 hover:text-white"
+              class="px-5 py-3.5 rounded-2xl bg-slate-900/80 border border-slate-700/80 hover:border-emerald-500/50 text-slate-300 hover:text-white font-mono text-sm font-semibold flex items-center gap-2 transition-all cursor-pointer"
             >
-              <i data-lucide="copy" class="w-4 h-4 text-electricBlue"></i>
+              <i data-lucide="copy" class="w-4 h-4 text-emerald-400"></i>
               <span id="copyEmailHeroBtn">COPY EMAIL</span>
             </button>
           </div>
 
           <!-- Quick Metrics Bar -->
           <div class="grid grid-cols-3 gap-3 pt-3 font-mono">
-            <div class="p-3 bg-surface border-2 border-black shadow-brutal-sm text-center">
-              <div class="text-xl sm:text-2xl font-black text-electricBlue">B.Tech IT</div>
-              <div class="text-[10px] sm:text-xs text-slate-400 font-bold uppercase">CGPA: 6.0 / 10</div>
+            <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-emerald-500/20 text-center">
+              <div class="text-xl sm:text-2xl font-bold text-emerald-400">6.0 CGPA</div>
+              <div class="text-[11px] text-slate-400">B.Tech IT (Till 3rd Sem)</div>
             </div>
-            <div class="p-3 bg-surface border-2 border-black shadow-brutal-sm text-center">
-              <div class="text-xl sm:text-2xl font-black text-cyberPurple">3x</div>
-              <div class="text-[10px] sm:text-xs text-slate-400 font-bold uppercase">Certifications</div>
+            <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-teal-500/20 text-center">
+              <div class="text-xl sm:text-2xl font-bold text-teal-300">3x Certs</div>
+              <div class="text-[11px] text-slate-400">GenAI &bull; HackerRank</div>
             </div>
-            <div class="p-3 bg-surface border-2 border-black shadow-brutal-sm text-center">
-              <div class="text-xl sm:text-2xl font-black text-amberGold">100%</div>
-              <div class="text-[10px] sm:text-xs text-slate-400 font-bold uppercase">Hands-on Practice</div>
+            <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-cyan-500/20 text-center">
+              <div class="text-xl sm:text-2xl font-bold text-cyan-400">100%</div>
+              <div class="text-[11px] text-slate-400">Hands-on Practice</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Hero: Permanent Photo Showcase & Interactive Live CLI Terminal -->
+        <!-- Right Hero: High-Tech Studio Portrait Showcase & Terminal -->
         <div class="lg:col-span-5 w-full space-y-6">
           
-          <!-- PERMANENT PHOTO SHOWCASE -->
-          <div class="brutal-card-blue p-5 flex flex-col sm:flex-row items-center gap-5">
+          <!-- Portrait Frame -->
+          <div class="relative group mx-auto max-w-[340px] sm:max-w-[370px]">
+            <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/25 via-teal-500/20 to-cyan-500/25 rounded-3xl blur-xl group-hover:blur-2xl transition-all opacity-80"></div>
             
-            <!-- Large Photo Frame with Permanent Image -->
-            <div class="w-48 h-56 sm:w-52 sm:h-64 shrink-0 rounded-2xl border-2.5 border-black bg-obsidian shadow-2xl overflow-hidden relative group">
-              <img 
-                src="profile.png" 
-                alt="Shubham Rajpoot" 
-                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                onerror="this.onerror=null; this.src='public/profile.png';"
-              />
-              <div class="absolute inset-x-0 bottom-0 bg-slate-950/95 py-2 px-3 border-t-2 border-black text-center font-mono text-[11px] font-bold text-cyan-400">
-                SHUBHAM RAJPOOT
-              </div>
-            </div>
+            <div class="relative rounded-3xl bg-slate-900/90 border border-emerald-500/30 p-3.5 shadow-2xl backdrop-blur-xl">
+              
+              <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-slate-950 border border-slate-800">
+                <img 
+                  src="profile.png" 
+                  alt="Shubham Rajpoot" 
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  onerror="this.onerror=null; this.src='public/profile.png';"
+                />
 
-            <!-- Social Links & Details Attached to Photo -->
-            <div class="space-y-3 text-center sm:text-left flex-1 font-mono">
-              <div>
-                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 uppercase">
-                  B.Tech IT &bull; CGPA 6.0
-                </span>
-                <h3 class="text-xl font-bold text-white font-sans mt-2">
-                  Shubham Rajpoot
-                </h3>
-                <p class="text-xs text-slate-300 font-mono font-semibold">
-                  Web Developer &amp; C++ Programmer
-                </p>
-                <p class="text-xs text-slate-400 flex items-center justify-center sm:justify-start gap-1.5 mt-1.5">
-                  <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-400"></i> Madhya Pradesh, India
-                </p>
+                <!-- Floating Glass Badge -->
+                <div class="absolute inset-x-2.5 bottom-2.5 p-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-emerald-500/30 flex items-center justify-between shadow-lg">
+                  <div>
+                    <h3 class="text-sm font-bold text-white font-sans">Shubham Rajpoot</h3>
+                    <p class="text-[11px] text-emerald-400 font-mono">B.Tech IT &bull; CGPA 6.0</p>
+                  </div>
+                  <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] font-mono text-emerald-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Ready</span>
+                  </div>
+                </div>
               </div>
 
-              <!-- Neo-Brutalist Action Buttons on Photo Card -->
-              <div class="grid grid-cols-2 gap-2.5 pt-2">
-                <a 
-                  href="https://github.com/shubhamrajpoot" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="py-2.5 px-3 bg-obsidian border-2.5 border-black text-xs font-black text-cyberCyan shadow-brutal-sm hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-blue hover:bg-black transition-all flex items-center justify-center gap-1.5 uppercase tracking-wider"
+              <!-- Buttons Under Photo -->
+              <div class="mt-3 grid grid-cols-2 gap-2.5 font-mono text-xs">
+                <a
+                  href="https://github.com/shubhamrajpoot"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-emerald-500/50 text-slate-200 hover:text-white transition-all"
                 >
-                  <i data-lucide="github" class="w-4 h-4 text-cyberCyan"></i>
+                  <i data-lucide="github" class="w-3.5 h-3.5 text-emerald-400"></i>
                   <span>GITHUB</span>
                 </a>
-                <a 
-                  href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="py-2.5 px-3 bg-electricBlue border-2.5 border-black text-xs font-black text-white shadow-brutal-sm hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-purple transition-all flex items-center justify-center gap-1.5 uppercase tracking-wider"
+
+                <a
+                  href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-500/30 hover:border-emerald-400 text-emerald-300 hover:text-white transition-all"
                 >
-                  <i data-lucide="linkedin" class="w-4 h-4 text-white"></i>
+                  <i data-lucide="linkedin" class="w-3.5 h-3.5 text-emerald-400"></i>
                   <span>LINKEDIN</span>
                 </a>
               </div>
-            </div>
 
+            </div>
           </div>
 
-          <!-- Interactive Live CLI Terminal Widget (Cyber Neo-Brutalist) -->
-          <div class="border-2.5 border-black bg-surface shadow-brutal-lg overflow-hidden">
-            
-            <div class="bg-black px-4 py-2 border-b-2 border-black flex items-center justify-between">
-              <div class="flex items-center gap-2 font-mono text-xs">
-                <span class="w-3 h-3 rounded-full bg-crimsonRed inline-block border border-black"></span>
-                <span class="w-3 h-3 rounded-full bg-amberGold inline-block border border-black"></span>
-                <span class="w-3 h-3 rounded-full bg-electricBlue inline-block border border-black"></span>
-                <span class="text-slate-300 font-bold ml-2">shubham@system:~ (zsh)</span>
+          <!-- Interactive Live Matrix Terminal -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-emerald-500/25 shadow-2xl">
+            <div class="bg-slate-950 px-4 py-2.5 border-b border-emerald-500/20 flex items-center justify-between">
+              <div class="flex items-center gap-2 font-mono text-xs text-slate-400">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+                <span>shubham@matrix:~ (zsh)</span>
               </div>
-              <span class="font-mono text-[10px] text-electricBlue font-bold border border-electricBlue/40 px-2 py-0.5 bg-electricBlue/10">
-                LIVE CLI
+              <span class="text-[10px] font-mono text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded bg-emerald-950/40">
+                ONLINE
               </span>
             </div>
 
-            <div class="p-4 bg-obsidian font-mono text-xs sm:text-sm text-slate-300 space-y-2.5 min-h-[170px]">
+            <div class="p-4 bg-voidDark/95 font-mono text-xs space-y-2.5">
               <div class="text-slate-400">
-                Type <span class="text-electricBlue font-bold underline cursor-pointer" onclick="runCommand('help')">help</span> for commands or click quick prompts below.
+                Type <span class="text-emerald-400 underline cursor-pointer" onclick="runCommand('help')">help</span> or click quick prompts below.
               </div>
-              
-              <!-- CLI Output Container -->
-              <div id="cliOutput" class="space-y-1.5 terminal-scroll max-h-44 overflow-y-auto pr-1">
-                <div class="text-cyberCyan">&gt; Welcome to Shubham Rajpoot's Interactive Terminal.</div>
+
+              <div id="cliOutput" class="space-y-1 terminal-scroll max-h-40 overflow-y-auto pr-1">
+                <div class="text-emerald-400">&gt; Initializing Shubham Rajpoot's Developer Terminal...</div>
                 <div class="text-slate-400">&gt; Status: Ready for Web Development &amp; Software Roles.</div>
               </div>
 
               <!-- Input Line -->
               <div class="flex items-center gap-2 pt-2 border-t border-slate-800">
-                <span class="text-electricBlue font-bold">$</span>
+                <span class="text-emerald-400 font-bold">$</span>
                 <input 
                   type="text" 
                   id="cliInput" 
                   placeholder="type: about, skills, projects, certs, clear..." 
-                  class="bg-transparent border-none text-white focus:outline-none flex-1 font-mono text-xs sm:text-sm"
+                  class="bg-transparent border-none text-white focus:outline-none flex-1 font-mono text-xs"
                   autocomplete="off"
                 />
-                <button onclick="handleCliSubmit()" class="px-2.5 py-1 bg-electricBlue text-white text-xs font-bold border border-black shadow-brutal-sm">
+                <button onclick="handleCliSubmit()" class="px-2.5 py-1 bg-emerald-500/20 hover:bg-emerald-500 text-emerald-300 hover:text-slate-950 text-xs font-bold rounded border border-emerald-500/40 transition-colors">
                   RUN
                 </button>
               </div>
 
               <!-- Quick Command Buttons -->
               <div class="flex flex-wrap gap-1.5 pt-1 text-[11px]">
-                <button onclick="runCommand('about')" class="px-2 py-0.5 bg-surfaceLight border border-slate-700 hover:border-electricBlue text-slate-300">about</button>
-                <button onclick="runCommand('skills')" class="px-2 py-0.5 bg-surfaceLight border border-slate-700 hover:border-electricBlue text-slate-300">skills</button>
-                <button onclick="runCommand('projects')" class="px-2 py-0.5 bg-surfaceLight border border-slate-700 hover:border-electricBlue text-slate-300">projects</button>
-                <button onclick="runCommand('certs')" class="px-2 py-0.5 bg-surfaceLight border border-slate-700 hover:border-electricBlue text-slate-300">certs</button>
-                <button onclick="runCommand('contact')" class="px-2 py-0.5 bg-surfaceLight border border-slate-700 hover:border-electricBlue text-slate-300">contact</button>
+                <button onclick="runCommand('about')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:border-emerald-500/50 text-slate-300">about</button>
+                <button onclick="runCommand('skills')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:border-emerald-500/50 text-slate-300">skills</button>
+                <button onclick="runCommand('projects')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:border-emerald-500/50 text-slate-300">projects</button>
+                <button onclick="runCommand('certs')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:border-emerald-500/50 text-slate-300">certs</button>
+                <button onclick="runCommand('contact')" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 hover:border-emerald-500/50 text-slate-300">contact</button>
               </div>
 
             </div>
-
           </div>
 
         </div>
@@ -586,96 +491,95 @@
     <!-- 2. CAREER OBJECTIVE & PROFILE -->
     <section id="about" class="space-y-6">
       
-      <!-- Section Header -->
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-electricBlue text-white border-2 border-black font-mono font-black flex items-center justify-center text-sm shadow-brutal-sm">
+        <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-xs text-emerald-400">
           01
         </div>
         <div>
-          <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-white uppercase">
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans">
             Career Objective &amp; Background
           </h2>
-          <p class="font-mono text-xs text-slate-400">Professional direction, technical strengths &amp; aspirations</p>
+          <p class="text-xs text-slate-400 font-mono">Professional trajectory &amp; engineering foundation</p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
-        <!-- Objective Statement Card -->
-        <div class="lg:col-span-7 brutal-card p-6 sm:p-8 flex flex-col justify-between space-y-4">
+        <!-- Objective Card -->
+        <div class="lg:col-span-7 glass-panel rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-xs font-bold text-electricBlue uppercase tracking-wider flex items-center gap-1.5">
-                <i data-lucide="target" class="w-4 h-4"></i> MISSION &amp; GOALS
+              <span class="font-mono text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+                <i data-lucide="target" class="w-4 h-4 text-emerald-400"></i> CAREER MISSION
               </span>
-              <span class="text-[11px] font-mono px-2 py-0.5 bg-electricBlue/15 text-electricBlue border border-electricBlue font-bold">
-                ASPIRING SOFTWARE ENGINEER
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                Aspiring Software Engineer
               </span>
             </div>
 
-            <blockquote class="text-lg sm:text-xl font-sans font-bold leading-relaxed text-white border-l-4 border-electricBlue pl-4 py-1 italic">
+            <blockquote class="text-base sm:text-lg font-medium leading-relaxed text-slate-100 border-l-2 border-emerald-500 pl-4 py-1 italic font-sans">
               "Motivated and enthusiastic B.Tech student with strong fundamentals in programming languages and web development. Seeking opportunities to enhance technical skills, gain practical experience, and contribute to innovative projects."
             </blockquote>
 
-            <p class="text-slate-300 text-sm leading-relaxed font-sans pt-2">
-              With a solid foundation in <strong class="text-white">C, C++, and Python</strong> combined with practical hands-on frontend web engineering in <strong class="text-cyberCyan">HTML, CSS, and JavaScript</strong>, I approach problems methodically. Continuous practice on platforms like <strong class="text-amberGold">HackerRank and LeetCode</strong> reinforces algorithmic problem solving and logic structuring.
+            <p class="text-slate-300 text-sm leading-relaxed font-sans pt-1">
+              Equipped with deep fundamentals in <strong class="text-white">C, C++, and Python</strong> alongside practical frontend web engineering in <strong class="text-emerald-300">HTML, CSS, and JavaScript</strong>. Regular problem-solving practice on platforms like <strong class="text-teal-300">HackerRank and LeetCode</strong> sharpens data structures and algorithmic complexity.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800 font-mono text-xs">
-            <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-              <span class="text-electricBlue font-bold block mb-1">01 / LOGIC</span>
-              <span class="text-slate-400 text-[11px]">C, C++ &amp; Python structured programming fundamentals.</span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 mt-6 border-t border-slate-800 font-mono text-xs">
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-emerald-500/20">
+              <span class="text-emerald-400 font-bold block mb-1">01 / LANGUAGES</span>
+              <span class="text-slate-400 text-[11px]">C, C++ &amp; Python structured programming.</span>
             </div>
-            <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-              <span class="text-cyberCyan font-bold block mb-1">02 / WEB DEV</span>
-              <span class="text-slate-400 text-[11px]">Interactive, responsive frontend interfaces with modern JS.</span>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-teal-500/20">
+              <span class="text-teal-300 font-bold block mb-1">02 / WEB DEV</span>
+              <span class="text-slate-400 text-[11px]">Interactive, responsive frontend interfaces.</span>
             </div>
-            <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-              <span class="text-cyberPurple font-bold block mb-1">03 / AI &amp; DSA</span>
-              <span class="text-slate-400 text-[11px]">Generative AI certification &amp; HackerRank problem solving.</span>
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-cyan-500/20">
+              <span class="text-cyan-400 font-bold block mb-1">03 / AI &amp; DSA</span>
+              <span class="text-slate-400 text-[11px]">Generative AI certified &amp; LeetCode practice.</span>
             </div>
           </div>
         </div>
 
-        <!-- Contact & Profile Quick Card -->
-        <div class="lg:col-span-5 brutal-card-purple p-6 sm:p-8 flex flex-col justify-between space-y-4">
+        <!-- Candidate Profile Card -->
+        <div class="lg:col-span-5 glass-panel-cyan rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-4">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-xs font-bold text-cyberPurple uppercase tracking-wider flex items-center gap-1.5">
-                <i data-lucide="user-check" class="w-4 h-4"></i> CANDIDATE PROFILE
+              <span class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-2">
+                <i data-lucide="user-check" class="w-4 h-4 text-cyan-400"></i> CANDIDATE PROFILE
               </span>
-              <span class="text-[11px] font-mono px-2 py-0.5 bg-cyberPurple text-white font-bold border border-black">
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-bold">
                 ACTIVE
               </span>
             </div>
 
-            <div class="space-y-2">
-              <h3 class="text-2xl font-display font-black text-white">
+            <div>
+              <h3 class="text-2xl font-bold text-white tracking-tight font-sans">
                 Shubham Rajpoot
               </h3>
-              <p class="text-xs font-mono text-slate-400">
+              <p class="text-xs font-mono text-slate-400 mt-1">
                 B.Tech in Information Technology
               </p>
             </div>
 
-            <!-- Direct Contact Rows -->
-            <div class="space-y-2 font-mono text-xs pt-2">
-              <div class="p-2.5 bg-obsidian border border-slate-700 flex items-center justify-between">
+            <!-- Direct Rows -->
+            <div class="space-y-2 font-mono text-xs pt-1">
+              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center justify-between">
                 <span class="text-slate-400 flex items-center gap-1.5">
-                  <i data-lucide="mail" class="w-3.5 h-3.5 text-electricBlue"></i> Email:
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-emerald-400"></i> Email:
                 </span>
                 <span class="text-white font-bold select-all">shubhamrajpoot505@gmail.com</span>
               </div>
-              
-              <div class="p-2.5 bg-obsidian border border-slate-700 flex items-center justify-between">
+
+              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center justify-between">
                 <span class="text-slate-400 flex items-center gap-1.5">
-                  <i data-lucide="phone" class="w-3.5 h-3.5 text-cyberPurple"></i> Phone:
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-400"></i> Phone:
                 </span>
                 <span class="text-white font-bold select-all">+91 9301149634</span>
               </div>
 
-              <div class="p-2.5 bg-obsidian border border-slate-700 flex items-center justify-between">
+              <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center justify-between">
                 <span class="text-slate-400 flex items-center gap-1.5">
                   <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-400"></i> Location:
                 </span>
@@ -684,10 +588,10 @@
             </div>
           </div>
 
-          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3 font-mono text-xs">
             <a 
               href="mailto:shubhamrajpoot505@gmail.com" 
-              class="flex-1 py-2.5 btn-brutal-blue font-mono text-xs font-bold text-center"
+              class="flex-1 py-2.5 rounded-xl btn-emerald-neon text-center font-bold"
             >
               SEND EMAIL
             </a>
@@ -695,7 +599,7 @@
               href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365"
               target="_blank"
               rel="noopener noreferrer" 
-              class="flex-1 py-2.5 btn-brutal-purple font-mono text-xs font-bold text-center"
+              class="flex-1 py-2.5 rounded-xl btn-glass-teal text-center font-bold"
             >
               LINKEDIN
             </a>
@@ -710,60 +614,59 @@
     <section id="education" class="space-y-6">
       
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-cyberCyan text-black border-2 border-black font-mono font-black flex items-center justify-center text-sm shadow-brutal-sm">
+        <div class="w-8 h-8 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center font-mono font-bold text-xs text-teal-400">
           02
         </div>
         <div>
-          <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-white uppercase">
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans">
             University Education
           </h2>
-          <p class="font-mono text-xs text-slate-400">Degree, academic score &amp; engineering foundation</p>
+          <p class="text-xs text-slate-400 font-mono">Degree, academic score &amp; engineering foundation</p>
         </div>
       </div>
 
-      <div class="brutal-card-blue p-6 sm:p-8">
-        
+      <div class="glass-panel rounded-2xl p-6 sm:p-8">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
           
           <div class="md:col-span-8 space-y-3">
             <div class="flex items-center gap-2 flex-wrap">
-              <span class="font-mono text-xs px-2.5 py-0.5 bg-electricBlue/20 text-electricBlue font-bold border border-electricBlue">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-bold">
                 Undergraduate Degree
               </span>
-              <span class="font-mono text-xs px-2.5 py-0.5 bg-amberGold/20 text-amberGold font-bold border border-amberGold flex items-center gap-1">
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-amberGold"></i> CGPA: 6.0 / 10 (Till 3rd Semester)
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 font-bold flex items-center gap-1">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i> CGPA: 6.0 / 10 (Till 3rd Semester)
               </span>
             </div>
 
-            <h3 class="text-2xl sm:text-3xl font-display font-black text-white">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight font-sans">
               Bachelor of Technology (B.Tech)
             </h3>
 
-            <div class="text-base font-sans font-bold text-cyan-400">
+            <div class="text-base font-sans font-semibold text-emerald-400">
               Department of Information Technology
             </div>
 
             <p class="text-sm font-sans text-slate-300 leading-relaxed pt-1">
-              Curriculum focused on fundamental programming languages, object-oriented concepts, structured algorithms, web technologies, and database principles.
+              Curriculum focused on core programming languages, object-oriented concepts, structured algorithms, web technologies, and database principles.
             </p>
 
             <div class="space-y-1.5 font-mono text-xs text-slate-300 pt-2">
               <div class="flex items-center gap-2">
-                <span class="text-electricBlue font-bold">&gt;&gt;</span> Core focus on Data Structures &amp; Algorithmic Logic
+                <span class="text-emerald-400 font-bold">&gt;&gt;</span> Core focus on Data Structures &amp; Algorithmic Logic
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-electricBlue font-bold">&gt;&gt;</span> Structured C &amp; C++ Programming Foundations
+                <span class="text-emerald-400 font-bold">&gt;&gt;</span> Structured C &amp; C++ Programming Foundations
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-electricBlue font-bold">&gt;&gt;</span> Web Development &amp; Modern Scripting (HTML, CSS, JS)
+                <span class="text-emerald-400 font-bold">&gt;&gt;</span> Web Development &amp; Modern Scripting (HTML, CSS, JS)
               </div>
             </div>
           </div>
 
-          <div class="md:col-span-4 p-5 bg-obsidian border-2 border-black shadow-brutal-sm space-y-3 font-mono text-xs">
+          <div class="md:col-span-4 p-5 rounded-2xl bg-slate-900/80 border border-emerald-500/20 space-y-3 font-mono text-xs">
             <div class="text-slate-400 uppercase font-bold text-[11px] border-b border-slate-800 pb-2 flex items-center justify-between">
               <span>ACADEMIC OVERVIEW</span>
-              <span class="text-cyan-400">ACTIVE</span>
+              <span class="text-emerald-400">ACTIVE</span>
             </div>
             <div class="flex justify-between">
               <span class="text-slate-400">Degree:</span>
@@ -771,292 +674,257 @@
             </div>
             <div class="flex justify-between">
               <span class="text-slate-400">Cumulative Score:</span>
-              <span class="text-amberGold font-bold">CGPA: 6.0 / 10</span>
+              <span class="text-amber-300 font-bold">CGPA: 6.0 / 10</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-slate-400">Progress:</span>
-              <span class="text-electricBlue font-bold">Till 3rd Semester</span>
+              <span class="text-slate-400">Duration:</span>
+              <span class="text-emerald-400 font-bold">Till 3rd Semester</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-slate-400">Domain:</span>
+              <span class="text-slate-400">Department:</span>
               <span class="text-white font-bold">Information Tech</span>
             </div>
           </div>
 
         </div>
-
       </div>
 
     </section>
 
-    <!-- 4. SKILLS MATRIX & ANALYTICAL CAPABILITIES -->
+    <!-- 4. TECHNICAL SKILLS MATRIX -->
     <section id="skills" class="space-y-6">
       
       <div class="flex items-center justify-between flex-wrap gap-4">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-amberGold text-black border-2 border-black font-mono font-black flex items-center justify-center text-sm shadow-brutal-sm">
+          <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center font-mono font-bold text-xs text-cyan-400">
             03
           </div>
           <div>
-            <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-white uppercase">
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans">
               Technical Skills Matrix
             </h2>
             <p class="font-mono text-xs text-slate-400">Languages, Web Development, Problem Solving Platforms &amp; AI Tools</p>
           </div>
         </div>
 
-        <span class="font-mono text-xs px-3 py-1 bg-surface border-2 border-black text-amberGold font-bold shadow-brutal-sm">
+        <span class="font-mono text-xs px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
           // HANDS-ON CAPABILITIES
         </span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         
-        <!-- Category 1: Programming Languages -->
-        <div class="brutal-card-blue p-6 flex flex-col justify-between">
+        <!-- Domain 1: Programming Languages -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between space-y-4">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 bg-electricBlue/20 text-electricBlue border-2 border-black flex items-center justify-center font-mono font-black text-lg shadow-brutal-sm">
-                C++
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-950/60 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-electricBlue text-white font-bold border border-black uppercase">
-                Languages
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 uppercase font-bold">
+                Domain 01
               </span>
             </div>
 
-            <h3 class="text-xl font-display font-black text-white mb-1">
+            <h3 class="text-xl font-bold text-white mb-4 font-sans">
               Programming Languages
             </h3>
-            <p class="text-xs font-mono text-slate-400 mb-4">Core Structured &amp; Object-Oriented Languages</p>
 
             <div class="space-y-3.5 font-mono text-xs">
-              <!-- C++ Skill -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-electricBlue flex items-center gap-1.5">
-                    <i data-lucide="code" class="w-3.5 h-3.5"></i> C++ Programming
-                  </span>
-                  <span class="text-slate-300">Advanced Core</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">C++ Programming</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">Advanced Core</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-electricBlue h-full w-[90%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-[90%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Functions, conditional logic, file handling, class architecture &amp; console systems.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Functions, conditional logic, file handling, class architecture &amp; console systems.</p>
               </div>
 
-              <!-- C Skill -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-electricBlue flex items-center gap-1.5">
-                    <i data-lucide="cpu" class="w-3.5 h-3.5"></i> C Language
-                  </span>
-                  <span class="text-slate-300">Proficient</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">C Language</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">Proficient</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-electricBlue h-full w-[85%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-[85%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Procedural syntax, pointers, structured memory management &amp; algorithmic logic.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Procedural syntax, pointers, structured memory management &amp; algorithmic logic.</p>
               </div>
 
-              <!-- Python Skill -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-electricBlue flex items-center gap-1.5">
-                    <i data-lucide="terminal" class="w-3.5 h-3.5"></i> Python
-                  </span>
-                  <span class="text-slate-300">Intermediate</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">Python</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">Intermediate</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-electricBlue h-full w-[80%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-[80%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Scripting, automation, clean syntax, data structures &amp; problem solving.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Scripting, clean syntax, data structures &amp; practical problem solving.</p>
               </div>
             </div>
           </div>
 
-          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px]">
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#CPlusPlus</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#C</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#Python</span>
+          <div class="pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#CPlusPlus</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#C</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#Python</span>
           </div>
         </div>
 
-        <!-- Category 2: Web Development -->
-        <div class="brutal-card-purple p-6 flex flex-col justify-between">
+        <!-- Domain 2: Web Development -->
+        <div class="glass-panel-cyan rounded-2xl p-6 flex flex-col justify-between space-y-4">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 bg-cyberCyan/20 text-cyberCyan border-2 border-black flex items-center justify-center font-mono font-black text-lg shadow-brutal-sm">
-                &lt;/&gt;
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-950/60 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                <i data-lucide="layout" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-cyberCyan text-black font-bold border border-black uppercase">
-                Web Dev
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/30 uppercase font-bold">
+                Domain 02
               </span>
             </div>
 
-            <h3 class="text-xl font-display font-black text-white mb-1">
+            <h3 class="text-xl font-bold text-white mb-4 font-sans">
               Web Development
             </h3>
-            <p class="text-xs font-mono text-slate-400 mb-4">Frontend Technologies &amp; Responsive Layouts</p>
 
             <div class="space-y-3.5 font-mono text-xs">
-              <!-- HTML5 Skill -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-cyberCyan flex items-center gap-1.5">
-                    <i data-lucide="file-code" class="w-3.5 h-3.5"></i> HTML / HTML5
-                  </span>
-                  <span class="text-slate-300">Mastery</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">HTML / HTML5</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-300 border border-teal-500/30">Mastery</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-cyberCyan h-full w-[95%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-teal-400 to-cyan-400 h-full w-[95%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Semantic document structure, web forms, accessibility &amp; responsive markup.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Semantic document structure, web forms, accessibility &amp; responsive markup.</p>
               </div>
 
-              <!-- CSS3 Skill -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-cyberCyan flex items-center gap-1.5">
-                    <i data-lucide="palette" class="w-3.5 h-3.5"></i> CSS / Modern Styling
-                  </span>
-                  <span class="text-slate-300">Proficient</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">CSS / Modern Styling</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-300 border border-teal-500/30">Proficient</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-cyberCyan h-full w-[88%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-teal-400 to-cyan-400 h-full w-[88%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Flexbox, CSS Grid, animations, media queries &amp; Neo-Brutalist design.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Flexbox, CSS Grid, animations, media queries &amp; high-tech glassmorphism.</p>
               </div>
 
-              <!-- JavaScript Skill -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-cyberCyan flex items-center gap-1.5">
-                    <i data-lucide="zap" class="w-3.5 h-3.5"></i> JavaScript (ES6+)
-                  </span>
-                  <span class="text-slate-300">Intermediate</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">JavaScript (ES6+)</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-300 border border-teal-500/30">Intermediate</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-cyberCyan h-full w-[82%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-teal-400 to-cyan-400 h-full w-[82%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">DOM manipulation, event handling, dynamic UI rendering &amp; local storage.</p>
+                <p class="text-[11px] text-slate-400 font-sans">DOM manipulation, event handling, dynamic UI rendering &amp; local storage.</p>
               </div>
             </div>
           </div>
 
-          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px]">
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#HTML5</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#CSS3</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#JavaScript</span>
+          <div class="pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#HTML5</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#CSS3</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#JavaScript</span>
           </div>
         </div>
 
-        <!-- Category 3: Problem Solving & Platforms -->
-        <div class="brutal-card-purple p-6 flex flex-col justify-between">
+        <!-- Domain 3: Problem Solving & Platforms -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between space-y-4">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 bg-cyberPurple/20 text-cyberPurple border-2 border-black flex items-center justify-center font-mono font-black text-lg shadow-brutal-sm">
-                DSA
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                <i data-lucide="terminal" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-cyberPurple text-white font-bold border border-black uppercase">
-                Problem Solving
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/30 uppercase font-bold">
+                Domain 03
               </span>
             </div>
 
-            <h3 class="text-xl font-display font-black text-white mb-1">
+            <h3 class="text-xl font-bold text-white mb-4 font-sans">
               Problem Solving &amp; Platforms
             </h3>
-            <p class="text-xs font-mono text-slate-400 mb-4">Competitive Programming &amp; Coding Practice</p>
 
             <div class="space-y-3.5 font-mono text-xs">
-              <!-- HackerRank -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-cyberPurple flex items-center gap-1.5">
-                    <i data-lucide="award" class="w-3.5 h-3.5"></i> HackerRank Platform
-                  </span>
-                  <span class="text-slate-300">Certified</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">HackerRank Platform</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/30">Certified</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-cyberPurple h-full w-[88%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-full w-[88%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Problem Solving Certificate (March 2025), data structures &amp; algorithmic logic.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Problem Solving Certificate (March 2025), data structures &amp; algorithmic logic.</p>
               </div>
 
-              <!-- LeetCode -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-cyberPurple flex items-center gap-1.5">
-                    <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> LeetCode Practice
-                  </span>
-                  <span class="text-slate-300">Active</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">LeetCode Practice</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/30">Active</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-cyberPurple h-full w-[85%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-full w-[85%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Continuous practice on arrays, strings, two pointers, hashing &amp; recursion.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Continuous practice on arrays, strings, two pointers, hashing &amp; recursion.</p>
               </div>
             </div>
           </div>
 
-          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px]">
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#HackerRank</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#LeetCode</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#DSA</span>
+          <div class="pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#HackerRank</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#LeetCode</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#DataStructures</span>
           </div>
         </div>
 
-        <!-- Category 4: Emerging Tech & Certifications -->
-        <div class="brutal-card-amber p-6 flex flex-col justify-between">
+        <!-- Domain 4: AI Tools & Certifications -->
+        <div class="glass-panel-cyan rounded-2xl p-6 flex flex-col justify-between space-y-4">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 bg-amberGold/20 text-amberGold border-2 border-black flex items-center justify-center font-mono font-black text-lg shadow-brutal-sm">
-                AI
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-950/60 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-amberGold text-black font-bold border border-black uppercase">
-                AI &amp; Certs
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 uppercase font-bold">
+                Domain 04
               </span>
             </div>
 
-            <h3 class="text-xl font-display font-black text-white mb-1">
+            <h3 class="text-xl font-bold text-white mb-4 font-sans">
               Generative AI &amp; Modern Tools
             </h3>
-            <p class="text-xs font-mono text-slate-400 mb-4">AI Workflows, CodeAlpha &amp; Developer Tools</p>
 
             <div class="space-y-3.5 font-mono text-xs">
-              <!-- Generative AI -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-amberGold flex items-center gap-1.5">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Generative AI
-                  </span>
-                  <span class="text-slate-300">Certified</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">Generative AI</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">Certified</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-amberGold h-full w-[90%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-amber-500 to-emerald-400 h-full w-[90%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Prompt engineering, LLM-assisted coding, automated debugging &amp; workflow velocity.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Prompt engineering, LLM-assisted coding, automated debugging &amp; workflow velocity.</p>
               </div>
 
-              <!-- CodeAlpha Certification -->
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm">
-                <div class="flex justify-between items-center mb-1.5 font-bold">
-                  <span class="text-amberGold flex items-center gap-1.5">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> CodeAlpha Certified
-                  </span>
-                  <span class="text-slate-300">Verified</span>
+              <div class="space-y-1.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="flex justify-between items-center font-bold">
+                  <span class="text-white flex items-center gap-1.5">CodeAlpha Certified</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">Verified</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2.5 border border-black overflow-hidden">
-                  <div class="bg-amberGold h-full w-[88%]"></div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-amber-500 to-emerald-400 h-full w-[88%]"></div>
                 </div>
-                <p class="text-[11px] text-slate-400 mt-1.5 font-sans">Practical software projects, structured development workflows &amp; submissions.</p>
+                <p class="text-[11px] text-slate-400 font-sans">Practical software assignments, structured coding tasks &amp; web submissions.</p>
               </div>
             </div>
           </div>
 
-          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px]">
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#GenerativeAI</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#CodeAlpha</span>
-            <span class="px-2 py-0.5 bg-surfaceLight border border-black text-slate-300">#Productivity</span>
+          <div class="pt-3 border-t border-slate-800 flex flex-wrap gap-1.5 font-mono text-[10px] text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#GenerativeAI</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#CodeAlpha</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">#ModernTech</span>
           </div>
         </div>
 
@@ -1069,40 +937,39 @@
       
       <div class="flex items-center justify-between flex-wrap gap-4">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-electricBlue text-white border-2 border-black font-mono font-black flex items-center justify-center text-sm shadow-brutal-sm">
+          <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-xs text-emerald-400">
             04
           </div>
           <div>
-            <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-white uppercase">
-              Featured Engineering Projects
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans">
+              Featured Projects
             </h2>
-            <p class="font-mono text-xs text-slate-400">C++ Console Systems &amp; Frontend Web Applications</p>
+            <p class="font-mono text-xs text-slate-400">C++ Console Systems Architecture &amp; Frontend Web Applications</p>
           </div>
         </div>
 
-        <span class="font-mono text-xs px-3 py-1 bg-surface border-2 border-black text-electricBlue font-bold shadow-brutal-sm">
-          // 3 BUILT PROJECTS
+        <span class="font-mono text-xs px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
+          // 3 DOCUMENTED PROJECTS
         </span>
       </div>
 
       <!-- MAIN PROJECT 1: ATM MACHINE SIMULATOR (C++ CONSOLE APPLICATION) -->
-      <div class="brutal-card-blue p-6 sm:p-8">
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-emerald-500/30">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <!-- Project Info -->
           <div class="lg:col-span-6 space-y-4">
             
             <div class="space-y-1">
               <div class="flex items-center gap-2 flex-wrap">
-                <span class="text-[10px] font-mono px-2 py-0.5 bg-electricBlue text-white font-bold border border-black uppercase">
+                <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-bold uppercase">
                   C++ Console Application
                 </span>
-                <span class="text-[10px] font-mono px-2 py-0.5 bg-surfaceLight text-cyan-300 font-bold border border-slate-700 uppercase">
-                  FEATURED PROJECT
+                <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-slate-800 text-teal-300 border border-slate-700 uppercase">
+                  FEATURED SYSTEM
                 </span>
               </div>
-              <h3 class="text-2xl sm:text-3xl font-display font-black text-white">
+              <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight font-sans">
                 ATM Machine Simulator
               </h3>
             </div>
@@ -1111,32 +978,32 @@
               Developed a console-based ATM Machine Simulator in C++. Implemented core features including PIN validation, balance inquiry, cash withdrawal, deposit engine, and transaction management using functions, conditional logic, and file handling.
             </p>
 
-            <!-- Feature Breakdown -->
+            <!-- Feature Matrix -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm space-y-1">
-                <div class="text-xs font-mono font-bold text-cyberCyan flex items-center gap-1.5">
-                  <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> PIN Validation
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-emerald-500/20 space-y-1">
+                <div class="text-xs font-mono font-bold text-emerald-300 flex items-center gap-1.5">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> PIN Validation
                 </div>
                 <p class="text-[11px] text-slate-400 font-sans">Multi-attempt security authentication with account lockout handling.</p>
               </div>
 
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm space-y-1">
-                <div class="text-xs font-mono font-bold text-electricBlue flex items-center gap-1.5">
-                  <i data-lucide="dollar-sign" class="w-3.5 h-3.5"></i> Cash Withdrawal
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-teal-500/20 space-y-1">
+                <div class="text-xs font-mono font-bold text-teal-300 flex items-center gap-1.5">
+                  <i data-lucide="dollar-sign" class="w-3.5 h-3.5 text-teal-400"></i> Cash Withdrawal
                 </div>
                 <p class="text-[11px] text-slate-400 font-sans">Real-time balance checks and boundary validation preventing overdrafts.</p>
               </div>
 
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm space-y-1">
-                <div class="text-xs font-mono font-bold text-amberGold flex items-center gap-1.5">
-                  <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Deposit Engine
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-cyan-500/20 space-y-1">
+                <div class="text-xs font-mono font-bold text-cyan-300 flex items-center gap-1.5">
+                  <i data-lucide="plus-circle" class="w-3.5 h-3.5 text-cyan-400"></i> Deposit Engine
                 </div>
                 <p class="text-[11px] text-slate-400 font-sans">Strict positive numeric input validation and immediate balance updates.</p>
               </div>
 
-              <div class="p-3 bg-obsidian border-2 border-black shadow-brutal-sm space-y-1">
-                <div class="text-xs font-mono font-bold text-cyberPurple flex items-center gap-1.5">
-                  <i data-lucide="file-text" class="w-3.5 h-3.5"></i> File Handling
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-purple-500/20 space-y-1">
+                <div class="text-xs font-mono font-bold text-purple-300 flex items-center gap-1.5">
+                  <i data-lucide="file-text" class="w-3.5 h-3.5 text-purple-400"></i> File Handling
                 </div>
                 <p class="text-[11px] text-slate-400 font-sans">Session tracking, transaction management, and persistent ledger logs.</p>
               </div>
@@ -1144,41 +1011,38 @@
 
             <!-- Tech Badges -->
             <div class="flex flex-wrap gap-1.5 pt-2 font-mono text-xs">
-              <span class="px-2.5 py-1 bg-obsidian border border-slate-700 text-electricBlue font-bold">#C++</span>
-              <span class="px-2.5 py-1 bg-obsidian border border-slate-700 text-white font-bold">#Functions</span>
-              <span class="px-2.5 py-1 bg-obsidian border border-slate-700 text-cyan-300 font-bold">#FileHandling</span>
-              <span class="px-2.5 py-1 bg-obsidian border border-slate-700 text-purple-300 font-bold">#ConditionalLogic</span>
-              <span class="px-2.5 py-1 bg-obsidian border border-slate-700 text-amber-300 font-bold">#PINValidation</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-emerald-300 font-semibold">#C++</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-teal-300 font-semibold">#Functions</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-cyan-300 font-semibold">#FileHandling</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-purple-300 font-semibold">#ConditionalLogic</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-amber-300 font-semibold">#PINValidation</span>
             </div>
 
           </div>
 
           <!-- Live Interactive ATM Simulator & Code View -->
           <div class="lg:col-span-6 w-full">
-            
-            <div class="border-2.5 border-black bg-surface shadow-brutal-lg overflow-hidden">
+            <div class="glass-panel rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl">
               
               <!-- Tab Header -->
-              <div class="bg-black px-4 py-2.5 border-b-2 border-black flex items-center justify-between">
+              <div class="bg-slate-950 px-4 py-2.5 border-b border-emerald-500/20 flex items-center justify-between">
                 <div class="flex items-center gap-2 font-mono text-xs">
-                  <span class="w-3 h-3 rounded-full bg-crimsonRed border border-black"></span>
-                  <span class="w-3 h-3 rounded-full bg-amberGold border border-black"></span>
-                  <span class="w-3 h-3 rounded-full bg-electricBlue border border-black"></span>
-                  <span class="font-bold text-white ml-2">ATM_Engine.cpp</span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="font-bold text-slate-200">ATM_Engine.cpp</span>
                 </div>
 
                 <div class="flex items-center gap-1 font-mono text-xs">
                   <button 
                     id="tabSimBtn" 
                     onclick="switchAtmTab('sim')" 
-                    class="px-2.5 py-1 bg-electricBlue text-white font-bold border border-black"
+                    class="px-3 py-1 rounded-lg bg-emerald-500 text-slate-950 font-bold"
                   >
                     LIVE DEMO
                   </button>
                   <button 
                     id="tabCodeBtn" 
                     onclick="switchAtmTab('code')" 
-                    class="px-2.5 py-1 bg-surfaceLight text-slate-300 font-bold border border-slate-700 hover:text-white"
+                    class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 font-semibold hover:text-white"
                   >
                     C++ CODE
                   </button>
@@ -1186,31 +1050,30 @@
               </div>
 
               <!-- SIMULATOR VIEW -->
-              <div id="atmSimView" class="p-5 bg-obsidian font-mono text-xs sm:text-sm space-y-4">
+              <div id="atmSimView" class="p-5 bg-voidDark/95 font-mono text-xs sm:text-sm space-y-4">
                 
-                <!-- Terminal Output Display -->
-                <div class="p-3 bg-black border-2 border-black text-slate-200 space-y-1 terminal-scroll max-h-44 overflow-y-auto">
-                  <div class="text-cyberCyan font-bold">========================================</div>
+                <div class="p-3.5 rounded-xl bg-slate-950 border border-emerald-500/20 space-y-1 terminal-scroll max-h-44 overflow-y-auto">
+                  <div class="text-emerald-400 font-bold">========================================</div>
                   <div class="text-white font-bold text-center">SHUBHAM RAJPOOT - MINI ATM SYSTEM</div>
-                  <div class="text-cyberCyan font-bold">========================================</div>
-                  <div id="atmLogMessage" class="text-amberGold pt-1">&gt; Welcome. Please enter your 4-digit PIN (Demo: 1234).</div>
+                  <div class="text-emerald-400 font-bold">========================================</div>
+                  <div id="atmLogMessage" class="text-emerald-300 pt-1">&gt; Welcome. Please enter your 4-digit PIN (Demo: 1234).</div>
                   <div id="atmLedgerStatus" class="text-slate-400 text-xs">Current Balance: ₹ 25,000.00</div>
                 </div>
 
                 <!-- ATM Interactive Actions -->
                 <div id="atmPinSection" class="space-y-2">
-                  <label class="block text-slate-300 font-bold text-xs uppercase">Enter 4-Digit Security PIN:</label>
+                  <label class="block text-slate-300 font-semibold text-xs">Enter 4-Digit Security PIN:</label>
                   <div class="flex items-center gap-2">
                     <input 
                       type="password" 
                       id="atmPinInput" 
                       maxlength="4" 
                       placeholder="e.g. 1234" 
-                      class="bg-surface border-2 border-black p-2.5 text-white font-mono text-center tracking-widest text-lg w-36 focus:border-electricBlue focus:outline-none shadow-brutal-sm"
+                      class="bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-white font-mono text-center tracking-widest text-lg w-36 focus:border-emerald-400 focus:outline-none"
                     />
                     <button 
                       onclick="atmVerifyPin()" 
-                      class="btn-brutal-blue px-4 py-2.5 font-bold text-xs uppercase"
+                      class="btn-emerald-neon px-4 py-2.5 rounded-xl text-xs uppercase"
                     >
                       AUTHENTICATE
                     </button>
@@ -1220,31 +1083,31 @@
                 <!-- ATM Menu (Appears after auth) -->
                 <div id="atmMenuSection" class="hidden space-y-3 pt-2">
                   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    <button onclick="atmCheckBalance()" class="p-2 bg-surface border-2 border-black text-cyberCyan font-bold shadow-brutal-sm hover:bg-black">
+                    <button onclick="atmCheckBalance()" class="p-2.5 rounded-xl bg-slate-900 border border-emerald-500/30 text-emerald-300 font-bold hover:bg-slate-800">
                       1. BALANCE
                     </button>
-                    <button onclick="atmPromptWithdraw()" class="p-2 bg-surface border-2 border-black text-electricBlue font-bold shadow-brutal-sm hover:bg-black">
+                    <button onclick="atmPromptWithdraw()" class="p-2.5 rounded-xl bg-slate-900 border border-teal-500/30 text-teal-300 font-bold hover:bg-slate-800">
                       2. WITHDRAW
                     </button>
-                    <button onclick="atmPromptDeposit()" class="p-2 bg-surface border-2 border-black text-amberGold font-bold shadow-brutal-sm hover:bg-black">
+                    <button onclick="atmPromptDeposit()" class="p-2.5 rounded-xl bg-slate-900 border border-cyan-500/30 text-cyan-300 font-bold hover:bg-slate-800">
                       3. DEPOSIT
                     </button>
-                    <button onclick="atmLogout()" class="p-2 bg-crimsonRed border-2 border-black text-white font-bold shadow-brutal-sm">
+                    <button onclick="atmLogout()" class="p-2.5 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-300 font-bold hover:bg-rose-900/40">
                       4. LOGOUT
                     </button>
                   </div>
 
-                  <!-- Amount Input Form (Dynamic for deposit/withdraw) -->
-                  <div id="atmAmountSection" class="hidden p-3 bg-surface border-2 border-black space-y-2">
-                    <label id="atmAmountLabel" class="block text-white font-bold text-xs">Enter Amount (₹):</label>
+                  <!-- Amount Input Form -->
+                  <div id="atmAmountSection" class="hidden p-3.5 rounded-xl bg-slate-900/80 border border-emerald-500/30 space-y-2">
+                    <label id="atmAmountLabel" class="block text-white font-semibold text-xs">Enter Amount (₹):</label>
                     <div class="flex items-center gap-2">
                       <input 
                         type="number" 
                         id="atmAmountInput" 
                         placeholder="500, 1000, 5000..." 
-                        class="bg-obsidian border-2 border-black p-2 text-white font-mono flex-1 focus:outline-none"
+                        class="bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white font-mono flex-1 focus:outline-none"
                       />
-                      <button onclick="atmExecuteTransaction()" class="btn-brutal-blue px-4 py-2 font-bold text-xs uppercase">
+                      <button onclick="atmExecuteTransaction()" class="btn-emerald-neon px-4 py-2.5 rounded-xl text-xs uppercase">
                         CONFIRM
                       </button>
                     </div>
@@ -1253,7 +1116,7 @@
 
                 <div class="flex justify-between items-center pt-2 border-t border-slate-800 text-[11px] text-slate-500">
                   <span>Logic: C++ OOP &amp; File Stream</span>
-                  <button onclick="atmResetAll()" class="text-slate-400 hover:text-white underline">
+                  <button onclick="atmResetAll()" class="text-slate-400 hover:text-emerald-400 underline cursor-pointer">
                     [Reset Simulator]
                   </button>
                 </div>
@@ -1261,51 +1124,51 @@
               </div>
 
               <!-- C++ CODE VIEW -->
-              <div id="atmCodeView" class="hidden p-4 bg-obsidian font-mono text-xs text-slate-300 terminal-scroll max-h-[340px] overflow-y-auto">
-                <pre class="text-[11px] leading-relaxed text-slate-200"><code><span class="text-cyberPurple">#include</span> <span class="text-amberGold">&lt;iostream&gt;</span>
-<span class="text-cyberPurple">#include</span> <span class="text-amberGold">&lt;fstream&gt;</span>
-<span class="text-cyberPurple">#include</span> <span class="text-amberGold">&lt;iomanip&gt;</span>
-<span class="text-electricBlue">using namespace</span> std;
+              <div id="atmCodeView" class="hidden p-4 bg-voidDark/95 font-mono text-xs text-slate-300 terminal-scroll max-h-[340px] overflow-y-auto">
+                <pre class="text-[11px] leading-relaxed text-slate-200"><code><span class="text-purple-400">#include</span> <span class="text-emerald-400">&lt;iostream&gt;</span>
+<span class="text-purple-400">#include</span> <span class="text-emerald-400">&lt;fstream&gt;</span>
+<span class="text-purple-400">#include</span> <span class="text-emerald-400">&lt;iomanip&gt;</span>
+<span class="text-teal-300">using namespace</span> std;
 
-<span class="text-cyberCyan">// ATM Machine Simulator by Shubham Rajpoot</span>
-<span class="text-electricBlue">class</span> <span class="text-amberGold">ATM</span> {
-<span class="text-electricBlue">private</span>:
-    <span class="text-electricBlue">int</span> pin = 1234;
-    <span class="text-electricBlue">double</span> balance = 25000.00;
-    <span class="text-electricBlue">int</span> attempts = 0;
+<span class="text-slate-500">// ATM Machine Simulator by Shubham Rajpoot</span>
+<span class="text-teal-300">class</span> <span class="text-emerald-400">ATM</span> {
+<span class="text-teal-300">private</span>:
+    <span class="text-teal-300">int</span> pin = 1234;
+    <span class="text-teal-300">double</span> balance = 25000.00;
+    <span class="text-teal-300">int</span> attempts = 0;
 
-<span class="text-electricBlue">public</span>:
-    <span class="text-electricBlue">bool</span> <span class="text-cyberCyan">verifyPin</span>(<span class="text-electricBlue">int</span> enteredPin) {
-        <span class="text-electricBlue">if</span> (enteredPin == pin) {
+<span class="text-teal-300">public</span>:
+    <span class="text-teal-300">bool</span> <span class="text-emerald-400">verifyPin</span>(<span class="text-teal-300">int</span> enteredPin) {
+        <span class="text-teal-300">if</span> (enteredPin == pin) {
             attempts = 0;
-            <span class="text-electricBlue">return true</span>;
+            <span class="text-teal-300">return true</span>;
         }
         attempts++;
-        <span class="text-electricBlue">return false</span>;
+        <span class="text-teal-300">return false</span>;
     }
 
-    <span class="text-electricBlue">void</span> <span class="text-cyberCyan">checkBalance</span>() {
-        cout &lt;&lt; <span class="text-amberGold">"Current Ledger Balance: ₹ "</span> &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; balance &lt;&lt; endl;
+    <span class="text-teal-300">void</span> <span class="text-emerald-400">checkBalance</span>() {
+        cout &lt;&lt; <span class="text-emerald-300">"Current Ledger Balance: ₹ "</span> &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; balance &lt;&lt; endl;
     }
 
-    <span class="text-electricBlue">bool</span> <span class="text-cyberCyan">withdraw</span>(<span class="text-electricBlue">double</span> amount) {
-        <span class="text-electricBlue">if</span> (amount &lt;= 0 || amount &gt; balance) <span class="text-electricBlue">return false</span>;
+    <span class="text-teal-300">bool</span> <span class="text-emerald-400">withdraw</span>(<span class="text-teal-300">double</span> amount) {
+        <span class="text-teal-300">if</span> (amount &lt;= 0 || amount &gt; balance) <span class="text-teal-300">return false</span>;
         balance -= amount;
-        logTransaction(<span class="text-amberGold">"WITHDRAWAL"</span>, amount);
-        <span class="text-electricBlue">return true</span>;
+        logTransaction(<span class="text-emerald-300">"WITHDRAWAL"</span>, amount);
+        <span class="text-teal-300">return true</span>;
     }
 
-    <span class="text-electricBlue">bool</span> <span class="text-cyberCyan">deposit</span>(<span class="text-electricBlue">double</span> amount) {
-        <span class="text-electricBlue">if</span> (amount &lt;= 0) <span class="text-electricBlue">return false</span>;
+    <span class="text-teal-300">bool</span> <span class="text-emerald-400">deposit</span>(<span class="text-teal-300">double</span> amount) {
+        <span class="text-teal-300">if</span> (amount &lt;= 0) <span class="text-teal-300">return false</span>;
         balance += amount;
-        logTransaction(<span class="text-amberGold">"DEPOSIT"</span>, amount);
-        <span class="text-electricBlue">return true</span>;
+        logTransaction(<span class="text-emerald-300">"DEPOSIT"</span>, amount);
+        <span class="text-teal-300">return true</span>;
     }
 
-    <span class="text-electricBlue">void</span> <span class="text-cyberCyan">logTransaction</span>(string type, <span class="text-electricBlue">double</span> amount) {
-        ofstream ledger(<span class="text-amberGold">"atm_history.txt"</span>, ios::app);
-        <span class="text-electricBlue">if</span> (ledger.is_open()) {
-            ledger &lt;&lt; type &lt;&lt; <span class="text-amberGold">": ₹ "</span> &lt;&lt; amount &lt;&lt; <span class="text-amberGold">" | Balance: ₹ "</span> &lt;&lt; balance &lt;&lt; endl;
+    <span class="text-teal-300">void</span> <span class="text-emerald-400">logTransaction</span>(string type, <span class="text-teal-300">double</span> amount) {
+        ofstream ledger(<span class="text-emerald-300">"atm_history.txt"</span>, ios::app);
+        <span class="text-teal-300">if</span> (ledger.is_open()) {
+            ledger &lt;&lt; type &lt;&lt; <span class="text-emerald-300">": ₹ "</span> &lt;&lt; amount &lt;&lt; <span class="text-emerald-300">" | Balance: ₹ "</span> &lt;&lt; balance &lt;&lt; endl;
             ledger.close();
         }
     }
@@ -1313,27 +1176,26 @@
               </div>
 
             </div>
-
           </div>
 
         </div>
 
       </div>
 
-      <!-- PROJECT 2 & 3: WEB DEVELOPMENT PORTFOLIO PROJECTS -->
+      <!-- WEB DEV PROJECTS 2 & 3 -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         
         <!-- Web Dev Project 1 -->
-        <div class="brutal-card-purple p-6 flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-cyberPurple text-white font-bold border border-black uppercase">
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-300 border border-teal-500/30 uppercase font-bold">
                 Frontend Web Dev
               </span>
               <span class="text-xs font-mono text-slate-400">HTML &bull; CSS &bull; JS</span>
             </div>
 
-            <h3 class="text-xl font-display font-black text-white">
+            <h3 class="text-xl font-bold text-white font-sans">
               Interactive Web Analytics Dashboard
             </h3>
 
@@ -1343,13 +1205,13 @@
 
             <div class="space-y-1.5 font-mono text-xs text-slate-300 pt-1">
               <div class="flex items-center gap-2">
-                <span class="text-cyberPurple font-bold">&gt;&gt;</span> Dynamic search &amp; category dataset filtering
+                <span class="text-emerald-400 font-bold">&gt;&gt;</span> Dynamic search &amp; category dataset filtering
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-cyberPurple font-bold">&gt;&gt;</span> Interactive KPI metrics (revenue, orders, averages)
+                <span class="text-emerald-400 font-bold">&gt;&gt;</span> Interactive KPI metrics (revenue, orders, averages)
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-cyberPurple font-bold">&gt;&gt;</span> Responsive CSS Grid &amp; Flexbox architecture
+                <span class="text-emerald-400 font-bold">&gt;&gt;</span> Responsive CSS Grid &amp; Flexbox architecture
               </div>
             </div>
           </div>
@@ -1360,7 +1222,7 @@
               href="https://github.com/shubhamrajpoot" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="text-cyberPurple hover:text-white font-bold flex items-center gap-1"
+              class="text-emerald-400 hover:text-white font-semibold flex items-center gap-1"
             >
               <span>SOURCE</span> <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
             </a>
@@ -1368,32 +1230,32 @@
         </div>
 
         <!-- Web Dev Project 2 -->
-        <div class="brutal-card-amber p-6 flex flex-col justify-between">
+        <div class="glass-panel-cyan rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-amberGold text-black font-bold border border-black uppercase">
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 uppercase font-bold">
                 Interactive Web Portal
               </span>
               <span class="text-xs font-mono text-slate-400">HTML &bull; CSS &bull; JS</span>
             </div>
 
-            <h3 class="text-xl font-display font-black text-white">
+            <h3 class="text-xl font-bold text-white font-sans">
               Student Academic &amp; Task Portal
             </h3>
 
             <p class="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed">
-              Designed and built an interactive task and coursework management web application for college students. Implemented input validation, subject score calculations, persistent local storage, and clean Neo-Brutalist design tokens.
+              Designed and built an interactive task and coursework management web application for college students. Implemented input validation, subject score calculations, persistent local storage, and clean high-tech tokens.
             </p>
 
             <div class="space-y-1.5 font-mono text-xs text-slate-300 pt-1">
               <div class="flex items-center gap-2">
-                <span class="text-amberGold font-bold">&gt;&gt;</span> Real-time attendance percentage margin calculator
+                <span class="text-cyan-400 font-bold">&gt;&gt;</span> Real-time attendance percentage margin calculator
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-amberGold font-bold">&gt;&gt;</span> Dynamic coursework entry with local storage persistence
+                <span class="text-cyan-400 font-bold">&gt;&gt;</span> Dynamic coursework entry with local storage persistence
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-amberGold font-bold">&gt;&gt;</span> Form validation preventing empty or invalid submissions
+                <span class="text-cyan-400 font-bold">&gt;&gt;</span> Form validation preventing empty or invalid submissions
               </div>
             </div>
           </div>
@@ -1404,7 +1266,7 @@
               href="https://github.com/shubhamrajpoot" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="text-amberGold hover:text-white font-bold flex items-center gap-1"
+              class="text-cyan-400 hover:text-white font-semibold flex items-center gap-1"
             >
               <span>SOURCE</span> <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
             </a>
@@ -1420,18 +1282,18 @@
       
       <div class="flex items-center justify-between flex-wrap gap-4">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-cyberPurple text-white border-2 border-black font-mono font-black flex items-center justify-center text-sm shadow-brutal-sm">
+          <div class="w-8 h-8 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center font-mono font-bold text-xs text-purple-400">
             05
           </div>
           <div>
-            <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-white uppercase">
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans">
               Certifications &amp; Achievements
             </h2>
             <p class="font-mono text-xs text-slate-400">Industry-recognized credentials &amp; competitive programming milestones</p>
           </div>
         </div>
 
-        <span class="font-mono text-xs px-3 py-1 bg-surface border-2 border-black text-cyberPurple font-bold shadow-brutal-sm">
+        <span class="font-mono text-xs px-3 py-1 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-300">
           // 3 CERTIFICATIONS VERIFIED
         </span>
       </div>
@@ -1439,13 +1301,13 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         
         <!-- Cert 1: Generative AI -->
-        <div class="brutal-card-blue p-6 flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 bg-electricBlue/20 text-electricBlue border-2 border-black flex items-center justify-center font-black">
-                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              <div class="w-11 h-11 rounded-xl bg-emerald-950/70 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-electricBlue text-white font-bold border border-black uppercase">
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 uppercase font-bold">
                 JUNE 2025
               </span>
             </div>
@@ -1454,7 +1316,7 @@
               <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">
                 SPECIALIZATION
               </span>
-              <h3 class="text-lg font-display font-black text-white">
+              <h3 class="text-lg font-bold text-white font-sans">
                 Generative AI Certification
               </h3>
             </div>
@@ -1464,28 +1326,28 @@
             </p>
 
             <div class="space-y-1 font-mono text-[11px] text-slate-400 pt-2 border-t border-slate-800">
-              <div class="text-electricBlue font-bold">&bull; Prompt Design &amp; Optimization</div>
-              <div class="text-electricBlue font-bold">&bull; LLM Development Workflows</div>
-              <div class="text-electricBlue font-bold">&bull; AI-Assisted Code Prototyping</div>
+              <div class="text-emerald-400 font-semibold">&bull; Prompt Design &amp; Optimization</div>
+              <div class="text-emerald-400 font-semibold">&bull; LLM Development Workflows</div>
+              <div class="text-emerald-400 font-semibold">&bull; AI-Assisted Code Prototyping</div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
             <span class="text-slate-400">Issued: June 2025</span>
-            <span class="text-electricBlue font-bold flex items-center gap-1">
+            <span class="text-emerald-400 font-bold flex items-center gap-1">
               <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Verified
             </span>
           </div>
         </div>
 
         <!-- Cert 2: HackerRank Problem Solving -->
-        <div class="brutal-card-purple p-6 flex flex-col justify-between">
+        <div class="glass-panel-cyan rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 bg-cyberPurple/20 text-cyberPurple border-2 border-black flex items-center justify-center font-black">
-                <i data-lucide="award" class="w-6 h-6"></i>
+              <div class="w-11 h-11 rounded-xl bg-teal-950/70 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                <i data-lucide="award" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-cyberPurple text-white font-bold border border-black uppercase">
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/30 uppercase font-bold">
                 MARCH 2025
               </span>
             </div>
@@ -1494,7 +1356,7 @@
               <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">
                 HACKERRANK
               </span>
-              <h3 class="text-lg font-display font-black text-white">
+              <h3 class="text-lg font-bold text-white font-sans">
                 Problem Solving Certificate
               </h3>
             </div>
@@ -1504,28 +1366,28 @@
             </p>
 
             <div class="space-y-1 font-mono text-[11px] text-slate-400 pt-2 border-t border-slate-800">
-              <div class="text-cyberPurple font-bold">&bull; Data Structures &amp; Algorithms</div>
-              <div class="text-cyberPurple font-bold">&bull; Algorithmic Efficiency</div>
-              <div class="text-cyberPurple font-bold">&bull; Edge-case Logic Handling</div>
+              <div class="text-teal-400 font-semibold">&bull; Data Structures &amp; Algorithms</div>
+              <div class="text-teal-400 font-semibold">&bull; Algorithmic Efficiency</div>
+              <div class="text-teal-400 font-semibold">&bull; Edge-case Logic Handling</div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
             <span class="text-slate-400">Issued: March 2025</span>
-            <span class="text-cyberPurple font-bold flex items-center gap-1">
+            <span class="text-teal-400 font-bold flex items-center gap-1">
               <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Verified
             </span>
           </div>
         </div>
 
         <!-- Cert 3: CodeAlpha -->
-        <div class="brutal-card-amber p-6 flex flex-col justify-between">
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 bg-amberGold/20 text-amberGold border-2 border-black flex items-center justify-center font-black">
-                <i data-lucide="file-check" class="w-6 h-6"></i>
+              <div class="w-11 h-11 rounded-xl bg-cyan-950/70 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                <i data-lucide="file-check" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-mono px-2 py-0.5 bg-amberGold text-black font-bold border border-black uppercase">
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 uppercase font-bold">
                 VERIFIED
               </span>
             </div>
@@ -1534,7 +1396,7 @@
               <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">
                 CODEALPHA
               </span>
-              <h3 class="text-lg font-display font-black text-white">
+              <h3 class="text-lg font-bold text-white font-sans">
                 CodeAlpha Certificate
               </h3>
             </div>
@@ -1544,15 +1406,15 @@
             </p>
 
             <div class="space-y-1 font-mono text-[11px] text-slate-400 pt-2 border-t border-slate-800">
-              <div class="text-amberGold font-bold">&bull; Web Development Applications</div>
-              <div class="text-amberGold font-bold">&bull; Modular Project Architecture</div>
-              <div class="text-amberGold font-bold">&bull; Practical Code Submissions</div>
+              <div class="text-cyan-400 font-semibold">&bull; Web Development Applications</div>
+              <div class="text-cyan-400 font-semibold">&bull; Modular Project Architecture</div>
+              <div class="text-cyan-400 font-semibold">&bull; Practical Code Submissions</div>
             </div>
           </div>
 
           <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
             <span class="text-slate-400">CodeAlpha Verified</span>
-            <span class="text-amberGold font-bold flex items-center gap-1">
+            <span class="text-cyan-400 font-bold flex items-center gap-1">
               <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Verified
             </span>
           </div>
@@ -1561,13 +1423,13 @@
       </div>
 
       <!-- Problem Solving Platforms Achievement Banner -->
-      <div class="brutal-card p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="glass-panel rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 bg-amberGold/20 text-amberGold border-2 border-black flex items-center justify-center text-xl font-black">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-2xl font-black">
             🏆
           </div>
           <div>
-            <div class="font-display font-bold text-white text-base sm:text-lg">
+            <div class="font-bold text-white text-base sm:text-lg font-sans">
               Active Problem Solver on HackerRank &amp; LeetCode
             </div>
             <p class="text-slate-400 text-xs font-mono">
@@ -1577,10 +1439,10 @@
         </div>
 
         <div class="flex items-center gap-2 font-mono text-xs">
-          <span class="px-3 py-1 bg-surface border border-slate-700 text-cyan-300 font-bold">
+          <span class="px-3 py-1 rounded-lg bg-slate-900 border border-emerald-500/30 text-emerald-300 font-bold">
             #HackerRankCertified
           </span>
-          <span class="px-3 py-1 bg-surface border border-slate-700 text-amberGold font-bold">
+          <span class="px-3 py-1 rounded-lg bg-slate-900 border border-teal-500/30 text-teal-300 font-bold">
             #LeetCodeSolver
           </span>
         </div>
@@ -1592,11 +1454,11 @@
     <section id="contact" class="space-y-6">
       
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-electricBlue text-white border-2 border-black font-mono font-black flex items-center justify-center text-sm shadow-brutal-sm">
+        <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-xs text-emerald-400">
           06
         </div>
         <div>
-          <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-white uppercase">
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans">
             Get In Touch
           </h2>
           <p class="font-mono text-xs text-slate-400">Open for Web Development, C++ engineering &amp; software opportunities</p>
@@ -1605,53 +1467,50 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Left: Direct Contact Information -->
+        <!-- Left: Direct Channels -->
         <div class="lg:col-span-5 space-y-4">
           
-          <!-- Email Card -->
-          <div class="brutal-card p-5 group flex items-start gap-4">
-            <div class="w-12 h-12 bg-electricBlue/20 text-electricBlue border-2 border-black flex items-center justify-center font-black shrink-0">
+          <div class="glass-panel rounded-2xl p-5 group flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-950/60 border border-emerald-500/30 flex items-center justify-center font-black shrink-0 text-emerald-400">
               <i data-lucide="mail" class="w-6 h-6"></i>
             </div>
             <div class="flex-1 min-w-0">
-              <div class="text-[11px] font-mono text-slate-400 uppercase font-bold">DIRECT EMAIL</div>
-              <a href="mailto:shubhamrajpoot505@gmail.com" class="text-white font-bold hover:text-electricBlue text-sm sm:text-base truncate block font-mono">
+              <div class="text-[11px] font-mono text-slate-400 uppercase font-semibold">DIRECT EMAIL</div>
+              <a href="mailto:shubhamrajpoot505@gmail.com" class="text-white font-bold hover:text-emerald-400 text-sm sm:text-base truncate block font-mono">
                 shubhamrajpoot505@gmail.com
               </a>
-              <button onclick="copyEmail()" class="text-xs text-electricBlue hover:underline font-mono font-bold mt-1 flex items-center gap-1">
+              <button onclick="copyEmail()" class="text-xs text-emerald-400 hover:underline font-mono font-bold mt-1 flex items-center gap-1 cursor-pointer">
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i> <span id="copyEmailContactBtn">1-Click Copy Email</span>
               </button>
             </div>
           </div>
 
-          <!-- Phone Card -->
-          <div class="brutal-card p-5 group flex items-start gap-4">
-            <div class="w-12 h-12 bg-cyberPurple/20 text-cyberPurple border-2 border-black flex items-center justify-center font-black shrink-0">
+          <div class="glass-panel rounded-2xl p-5 group flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-teal-950/60 border border-teal-500/30 flex items-center justify-center font-black shrink-0 text-teal-400">
               <i data-lucide="phone" class="w-6 h-6"></i>
             </div>
             <div class="flex-1 min-w-0">
-              <div class="text-[11px] font-mono text-slate-400 uppercase font-bold">PHONE NUMBER</div>
-              <a href="tel:+919301149634" class="text-white font-bold hover:text-cyberPurple text-sm sm:text-base font-mono block">
+              <div class="text-[11px] font-mono text-slate-400 uppercase font-semibold">PHONE NUMBER</div>
+              <a href="tel:+919301149634" class="text-white font-bold hover:text-teal-300 text-sm sm:text-base font-mono block">
                 +91 9301149634
               </a>
-              <button onclick="copyPhone()" class="text-xs text-cyberPurple hover:underline font-mono font-bold mt-1 flex items-center gap-1">
+              <button onclick="copyPhone()" class="text-xs text-teal-300 hover:underline font-mono font-bold mt-1 flex items-center gap-1 cursor-pointer">
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i> <span id="copyPhoneContactBtn">1-Click Copy Phone</span>
               </button>
             </div>
           </div>
 
-          <!-- LinkedIn Card -->
-          <div class="brutal-card p-5 group flex items-start gap-4">
-            <div class="w-12 h-12 bg-amberGold/20 text-amberGold border-2 border-black flex items-center justify-center font-black shrink-0">
+          <div class="glass-panel rounded-2xl p-5 group flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-950/60 border border-cyan-500/30 flex items-center justify-center font-black shrink-0 text-cyan-400">
               <i data-lucide="linkedin" class="w-6 h-6"></i>
             </div>
             <div class="flex-1 min-w-0">
-              <div class="text-[11px] font-mono text-slate-400 uppercase font-bold">LINKEDIN PROFILE</div>
+              <div class="text-[11px] font-mono text-slate-400 uppercase font-semibold">LINKEDIN PROFILE</div>
               <a 
                 href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="text-white font-bold hover:text-amberGold text-sm sm:text-base truncate block font-mono"
+                class="text-white font-bold hover:text-cyan-400 text-sm sm:text-base truncate block font-mono"
               >
                 shubham-rajpoot-b7b4a3365
               </a>
@@ -1659,7 +1518,7 @@
                 href="https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="text-xs text-amberGold hover:underline font-mono font-bold mt-1 flex items-center gap-1"
+                class="text-xs text-cyan-400 hover:underline font-mono font-bold mt-1 flex items-center gap-1"
               >
                 <span>Open LinkedIn Profile</span> <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
               </a>
@@ -1669,9 +1528,8 @@
         </div>
 
         <!-- Right: Message Form -->
-        <div class="lg:col-span-7 brutal-card p-6 sm:p-8">
-          
-          <h3 class="text-xl font-display font-black text-white uppercase mb-2">
+        <div class="lg:col-span-7 glass-panel rounded-2xl p-6 sm:p-8">
+          <h3 class="text-xl font-bold text-white uppercase mb-2 font-sans">
             Send a Direct Transmission
           </h3>
           <p class="text-xs font-mono text-slate-400 mb-6">
@@ -1681,59 +1539,58 @@
           <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4 font-mono text-xs">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="senderName" class="block font-bold text-slate-300 mb-1">YOUR NAME *</label>
+                <label for="senderName" class="block font-semibold text-slate-300 mb-1">YOUR NAME *</label>
                 <input 
                   type="text" 
                   id="senderName" 
                   required 
                   placeholder="e.g. John Doe / Tech Recruiter" 
-                  class="w-full bg-obsidian border-2 border-black p-2.5 text-white font-mono focus:border-electricBlue focus:outline-none shadow-brutal-sm"
+                  class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white font-mono focus:border-emerald-400 focus:outline-none"
                 />
               </div>
 
               <div>
-                <label for="senderEmail" class="block font-bold text-slate-300 mb-1">YOUR EMAIL *</label>
+                <label for="senderEmail" class="block font-semibold text-slate-300 mb-1">YOUR EMAIL *</label>
                 <input 
                   type="email" 
                   id="senderEmail" 
                   required 
                   placeholder="e.g. john@company.com" 
-                  class="w-full bg-obsidian border-2 border-black p-2.5 text-white font-mono focus:border-electricBlue focus:outline-none shadow-brutal-sm"
+                  class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white font-mono focus:border-emerald-400 focus:outline-none"
                 />
               </div>
             </div>
 
             <div>
-              <label for="messageSubject" class="block font-bold text-slate-300 mb-1">SUBJECT / TOPIC *</label>
+              <label for="messageSubject" class="block font-semibold text-slate-300 mb-1">SUBJECT / TOPIC *</label>
               <input 
                 type="text" 
                 id="messageSubject" 
                 required 
                 placeholder="Web Development / C++ Opportunity" 
-                class="w-full bg-obsidian border-2 border-black p-2.5 text-white font-mono focus:border-electricBlue focus:outline-none shadow-brutal-sm"
+                class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white font-mono focus:border-emerald-400 focus:outline-none"
               />
             </div>
 
             <div>
-              <label for="messageContent" class="block font-bold text-slate-300 mb-1">MESSAGE / INQUIRY *</label>
+              <label for="messageContent" class="block font-semibold text-slate-300 mb-1">MESSAGE / INQUIRY *</label>
               <textarea 
                 id="messageContent" 
                 rows="4" 
                 required 
                 placeholder="Hi Shubham, I reviewed your portfolio and would like to discuss an opportunity..." 
-                class="w-full bg-obsidian border-2 border-black p-2.5 text-white font-mono focus:border-electricBlue focus:outline-none shadow-brutal-sm"
+                class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white font-mono focus:border-emerald-400 focus:outline-none"
               ></textarea>
             </div>
 
             <div class="flex items-center justify-between pt-2">
-              <button type="submit" class="btn-brutal-blue px-6 py-3 font-mono text-sm font-bold flex items-center gap-2">
+              <button type="submit" class="btn-emerald-neon px-6 py-3 rounded-xl font-mono text-sm font-bold flex items-center gap-2">
                 <i data-lucide="send" class="w-4 h-4"></i>
                 <span>TRANSMIT MESSAGE</span>
               </button>
-              <span id="formFeedback" class="text-xs font-mono text-electricBlue font-bold"></span>
+              <span id="formFeedback" class="text-xs font-mono text-emerald-400 font-bold"></span>
             </div>
           </form>
-
         </div>
 
       </div>
@@ -1743,53 +1600,49 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="mt-20 border-t-2.5 border-black bg-surface font-mono text-xs py-10 px-4 sm:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+  <footer class="mt-20 border-t border-emerald-500/20 bg-slate-950/80 font-mono text-xs py-10 px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       
-      <!-- Left info -->
       <div class="space-y-1 text-center md:text-left">
-        <div class="font-display font-black text-lg text-white">
+        <div class="font-extrabold text-lg text-white font-sans">
           SHUBHAM RAJPOOT
         </div>
         <p class="text-slate-400 text-xs">
           B.Tech in Information Technology &bull; CGPA: 6.0 / 10 (Till 3rd Sem)
         </p>
-        <p class="text-[11px] text-cyan-400">
+        <p class="text-[11px] text-emerald-400">
           C++ &bull; Web Development &bull; Python &bull; Generative AI Certified &bull; HackerRank Problem Solving
         </p>
       </div>
 
-      <!-- Live Clock & Top Button -->
       <div class="flex items-center gap-3">
-        <div class="px-3.5 py-1.5 bg-obsidian border-2 border-black shadow-brutal-sm text-center">
+        <div class="px-4 py-2 rounded-xl bg-slate-900 border border-emerald-500/30 text-center">
           <span class="text-slate-400 text-[10px] block">LOCAL TIME (IST)</span>
-          <span id="liveClock" class="font-bold text-electricBlue text-sm">--:--:-- IST</span>
+          <span id="liveClock" class="font-bold text-emerald-400 text-sm">--:--:-- IST</span>
         </div>
 
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn-brutal-blue p-2.5 font-bold" title="Back to top">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn-emerald-neon p-3 rounded-xl font-bold cursor-pointer" title="Back to top">
           <i data-lucide="arrow-up" class="w-4 h-4"></i>
         </button>
       </div>
 
     </div>
 
-    <div class="max-w-7xl mx-auto mt-8 pt-4 border-t border-slate-800 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+    <div class="max-w-6xl mx-auto mt-8 pt-4 border-t border-slate-900 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
       <span>&copy; 2026 Shubham Rajpoot. All rights reserved.</span>
       <span class="text-slate-400 font-bold">C++ &bull; PYTHON &bull; WEB DEV &bull; GENERATIVE AI &bull; HACKERRANK</span>
     </div>
   </footer>
 
-  <!-- Toast Notification Container -->
-  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-electricBlue text-white border-2 border-black px-5 py-3 font-mono text-xs font-bold flex items-center gap-2.5 shadow-brutal-lg">
-    <i data-lucide="check-circle" class="w-4 h-4"></i>
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-slate-950 text-white border border-emerald-500/50 px-5 py-3 rounded-2xl font-mono text-xs font-bold flex items-center gap-2.5 shadow-glow-emerald">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
     <span id="toastMessage">Notification</span>
   </div>
 
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Toast Notification
     function showToast(msg) {
       const toast = document.getElementById('toastNotification');
       const toastMsg = document.getElementById('toastMessage');
@@ -1803,11 +1656,10 @@
       }, 3500);
     }
 
-    // 1-Click Copy Email
     function copyEmail() {
       const email = 'shubhamrajpoot505@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
-        showToast('Copied to clipboard: ' + email);
+        showToast('Copied email to clipboard: ' + email);
         const heroBtn = document.getElementById('copyEmailHeroBtn');
         const contactBtn = document.getElementById('copyEmailContactBtn');
         if (heroBtn) heroBtn.textContent = 'COPIED!';
@@ -1819,11 +1671,10 @@
       });
     }
 
-    // 1-Click Copy Phone
     function copyPhone() {
       const phone = '+91 9301149634';
       navigator.clipboard.writeText(phone).then(() => {
-        showToast('Copied to clipboard: ' + phone);
+        showToast('Copied phone to clipboard: ' + phone);
         const contactBtn = document.getElementById('copyPhoneContactBtn');
         if (contactBtn) contactBtn.textContent = 'COPIED!';
         setTimeout(() => {
@@ -1832,7 +1683,6 @@
       });
     }
 
-    // Live Clock Update
     function updateClock() {
       const now = new Date();
       const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
@@ -1843,7 +1693,6 @@
     setInterval(updateClock, 1000);
     updateClock();
 
-    // Mobile Drawer Toggle
     const mobileToggle = document.getElementById('mobileMenuToggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
     if (mobileToggle && mobileDrawer) {
@@ -1852,7 +1701,6 @@
       });
     }
 
-    // Form Submission
     function handleFormSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('senderName').value;
@@ -1866,7 +1714,7 @@
         setTimeout(() => {
           feedback.textContent = '';
         }, 4000);
-      }, 600);
+      }, 500);
     }
 
     // ==========================================
@@ -1900,7 +1748,7 @@
         "3. Student Academic & Task Management Portal (HTML, CSS, JS)"
       ],
       certs: [
-        "--- CERTIFICATIONS & ACHEIVEMENTS ---",
+        "--- CERTIFICATIONS & ACHIEVEMENTS ---",
         "[*] Generative AI Certification (June 2025)",
         "[*] HackerRank Problem Solving Certificate (March 2025)",
         "[*] CodeAlpha Certificate",
@@ -1934,7 +1782,7 @@
 
     function runCommand(cmd) {
       const cleanCmd = cmd.trim().toLowerCase();
-      appendCli('$ ' + cleanCmd, 'text-electricBlue font-bold');
+      appendCli('$ ' + cleanCmd, 'text-emerald-400 font-bold');
 
       if (cleanCmd === 'clear') {
         cliOutput.innerHTML = '';
@@ -1944,10 +1792,10 @@
 
       if (cliData[cleanCmd]) {
         cliData[cleanCmd].forEach(line => {
-          appendCli(line, cleanCmd === 'skills' || cleanCmd === 'projects' ? 'text-cyberCyan' : 'text-slate-300');
+          appendCli(line, cleanCmd === 'skills' || cleanCmd === 'projects' ? 'text-teal-300' : 'text-slate-300');
         });
       } else {
-        appendCli('Command not recognized: "' + cleanCmd + '". Type "help" for options.', 'text-crimsonRed');
+        appendCli('Command not recognized: "' + cleanCmd + '". Type "help" for options.', 'text-rose-400');
       }
     }
 
@@ -1976,7 +1824,7 @@
       attempts: 0,
       maxAttempts: 3,
       isAuthenticated: false,
-      currentAction: null // 'withdraw' | 'deposit' | null
+      currentAction: null
     };
 
     function switchAtmTab(tab) {
@@ -1988,17 +1836,17 @@
       if (tab === 'sim') {
         simView.classList.remove('hidden');
         codeView.classList.add('hidden');
-        simBtn.className = 'px-2.5 py-1 bg-electricBlue text-white font-bold border border-black';
-        codeBtn.className = 'px-2.5 py-1 bg-surfaceLight text-slate-300 font-bold border border-slate-700 hover:text-white';
+        simBtn.className = 'px-3 py-1 rounded-lg bg-emerald-500 text-slate-950 font-bold';
+        codeBtn.className = 'px-3 py-1 rounded-lg bg-slate-900 text-slate-300 font-semibold hover:text-white';
       } else {
         simView.classList.add('hidden');
         codeView.classList.remove('hidden');
-        codeBtn.className = 'px-2.5 py-1 bg-electricBlue text-white font-bold border border-black';
-        simBtn.className = 'px-2.5 py-1 bg-surfaceLight text-slate-300 font-bold border border-slate-700 hover:text-white';
+        codeBtn.className = 'px-3 py-1 rounded-lg bg-emerald-500 text-slate-950 font-bold';
+        simBtn.className = 'px-3 py-1 rounded-lg bg-slate-900 text-slate-300 font-semibold hover:text-white';
       }
     }
 
-    function updateAtmDisplay(msg, colorClass = 'text-amberGold') {
+    function updateAtmDisplay(msg, colorClass = 'text-emerald-300') {
       const msgEl = document.getElementById('atmLogMessage');
       const balEl = document.getElementById('atmLedgerStatus');
       if (msgEl) {
@@ -2015,7 +1863,7 @@
       const val = pinInput.value.trim();
 
       if (atmState.attempts >= atmState.maxAttempts) {
-        updateAtmDisplay('SECURITY LOCKOUT: Maximum PIN attempts reached. Click [Reset Simulator].', 'text-crimsonRed');
+        updateAtmDisplay('SECURITY LOCKOUT: Maximum PIN attempts reached. Click [Reset Simulator].', 'text-rose-400');
         return;
       }
 
@@ -2024,14 +1872,14 @@
         atmState.attempts = 0;
         document.getElementById('atmPinSection').classList.add('hidden');
         document.getElementById('atmMenuSection').classList.remove('hidden');
-        updateAtmDisplay('AUTHENTICATED: Welcome, Shubham Rajpoot! Select an operation below.', 'text-cyberCyan');
+        updateAtmDisplay('AUTHENTICATED: Welcome, Shubham Rajpoot! Select an operation below.', 'text-emerald-400');
       } else {
         atmState.attempts++;
         const remaining = atmState.maxAttempts - atmState.attempts;
         if (remaining <= 0) {
-          updateAtmDisplay('SECURITY LOCKOUT: 3 incorrect attempts. Card locked.', 'text-crimsonRed');
+          updateAtmDisplay('SECURITY LOCKOUT: 3 incorrect attempts. Card locked.', 'text-rose-400');
         } else {
-          updateAtmDisplay('INCORRECT PIN! Attempts remaining: ' + remaining + ' (Hint: 1234)', 'text-crimsonRed');
+          updateAtmDisplay('INCORRECT PIN! Attempts remaining: ' + remaining + ' (Hint: 1234)', 'text-rose-400');
         }
       }
       pinInput.value = '';
@@ -2039,7 +1887,7 @@
 
     function atmCheckBalance() {
       document.getElementById('atmAmountSection').classList.add('hidden');
-      updateAtmDisplay('LEDGER INQUIRY: Available balance is ₹ ' + atmState.balance.toLocaleString('en-IN', { minimumFractionDigits: 2 }), 'text-electricBlue');
+      updateAtmDisplay('LEDGER INQUIRY: Available balance is ₹ ' + atmState.balance.toLocaleString('en-IN', { minimumFractionDigits: 2 }), 'text-teal-300');
     }
 
     function atmPromptWithdraw() {
@@ -2047,7 +1895,7 @@
       document.getElementById('atmAmountSection').classList.remove('hidden');
       document.getElementById('atmAmountLabel').textContent = 'Enter Withdrawal Amount (₹):';
       document.getElementById('atmAmountInput').value = '';
-      updateAtmDisplay('PROMPT: Enter amount to withdraw from account.', 'text-amberGold');
+      updateAtmDisplay('PROMPT: Enter amount to withdraw from account.', 'text-emerald-300');
     }
 
     function atmPromptDeposit() {
@@ -2055,7 +1903,7 @@
       document.getElementById('atmAmountSection').classList.remove('hidden');
       document.getElementById('atmAmountLabel').textContent = 'Enter Deposit Amount (₹):';
       document.getElementById('atmAmountInput').value = '';
-      updateAtmDisplay('PROMPT: Enter positive cash amount to deposit.', 'text-amberGold');
+      updateAtmDisplay('PROMPT: Enter positive cash amount to deposit.', 'text-emerald-300');
     }
 
     function atmExecuteTransaction() {
@@ -2063,21 +1911,21 @@
       const amt = parseFloat(input.value);
 
       if (isNaN(amt) || amt <= 0) {
-        updateAtmDisplay('VALIDATION ERROR: Please enter a valid positive numeric amount.', 'text-crimsonRed');
+        updateAtmDisplay('VALIDATION ERROR: Please enter a valid positive numeric amount.', 'text-rose-400');
         return;
       }
 
       if (atmState.currentAction === 'withdraw') {
         if (amt > atmState.balance) {
-          updateAtmDisplay('TRANSACTION DECLINED: Insufficient balance! (Available: ₹' + atmState.balance.toLocaleString() + ')', 'text-crimsonRed');
+          updateAtmDisplay('TRANSACTION DECLINED: Insufficient balance! (Available: ₹' + atmState.balance.toLocaleString() + ')', 'text-rose-400');
         } else {
           atmState.balance -= amt;
-          updateAtmDisplay('SUCCESS: Dispensed ₹ ' + amt.toLocaleString() + '. Updated balance: ₹ ' + atmState.balance.toLocaleString(), 'text-cyberCyan');
+          updateAtmDisplay('SUCCESS: Dispensed ₹ ' + amt.toLocaleString() + '. Updated balance: ₹ ' + atmState.balance.toLocaleString(), 'text-emerald-400');
           document.getElementById('atmAmountSection').classList.add('hidden');
         }
       } else if (atmState.currentAction === 'deposit') {
         atmState.balance += amt;
-        updateAtmDisplay('SUCCESS: Deposited ₹ ' + amt.toLocaleString() + '. Updated balance: ₹ ' + atmState.balance.toLocaleString(), 'text-cyberCyan');
+        updateAtmDisplay('SUCCESS: Deposited ₹ ' + amt.toLocaleString() + '. Updated balance: ₹ ' + atmState.balance.toLocaleString(), 'text-emerald-400');
         document.getElementById('atmAmountSection').classList.add('hidden');
       }
       input.value = '';
@@ -2096,7 +1944,7 @@
       atmState.balance = 25000.00;
       atmState.attempts = 0;
       atmLogout();
-      updateAtmDisplay('ATM Simulator kernel reset. Enter PIN 1234.', 'text-amberGold');
+      updateAtmDisplay('ATM Simulator kernel reset. Enter PIN 1234.', 'text-emerald-400');
     }
   </script>
 
