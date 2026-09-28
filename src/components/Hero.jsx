@@ -1,9 +1,9 @@
 import React from 'react';
 import { ArrowRight, Download, MapPin, Mail, Phone, Cpu, ExternalLink, Sparkles, Code2, Bot, Award, CheckCircle } from 'lucide-react';
 import { personalInfo, education } from '../data/portfolioData';
-import profileImg from '../assets/profile.png';
 
 export const Hero = () => {
+  const profileImg = personalInfo.profilePhoto || '/profile.png';
   return (
     <section id="hero" className="relative pt-4 sm:pt-8 pb-8 sm:pb-12">
       {/* Background Ambient Glows */}
@@ -143,10 +143,10 @@ export const Hero = () => {
                 <img 
                   src={profileImg} 
                   alt="Shubham Rajpoot" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-[center_15%]"
                   onError={(e) => {
                     e.currentTarget.onerror = null;
-                    e.currentTarget.src = '/profile.png';
+                    e.currentTarget.src = '/profile.jpg';
                   }}
                 />
 

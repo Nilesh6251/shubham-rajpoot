@@ -9,7 +9,7 @@ export const personalInfo = {
   github: "https://github.com/shubhamrajpoot",
   linkedin: "https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365",
   resumeUrl: "/resume.pdf",
-  profilePhoto: "/profile.png",
+  profilePhoto: "/profile.jpg",
   careerObjective: "Motivated and enthusiastic B.Tech student with strong fundamentals in programming languages and web development. Seeking opportunities to enhance technical skills, gain practical experience, and contribute to innovative projects."
 };
 
