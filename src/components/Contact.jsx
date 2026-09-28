@@ -198,34 +198,34 @@ export const Contact = ({ playSound, onShowToast }) => {
               <button
                 type="button"
                 onClick={() => handleTemplate(
-                  "Data Analyst Opportunity",
-                  "Hi Shakti,\n\nWe reviewed your portfolio and background in C++, Power BI, and Oracle Cloud (OCI). We have an open Data Analyst role and would like to discuss it with you."
+                  "Web Developer Opportunity",
+                  "Hi Shubham,\n\nWe reviewed your portfolio and background in Web Development (HTML, CSS, JavaScript) and C++. We have an open role and would like to discuss it with you."
                 )}
                 className="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-300 text-[11px]"
               >
-                + Data Analyst Role
+                + Web Developer Role
               </button>
 
               <button
                 type="button"
                 onClick={() => handleTemplate(
-                  "Power BI Dashboard Project",
-                  "Hi Shakti,\n\nWe need help creating visual reporting pipelines and interactive dashboards. Let's explore collaborating on a project."
+                  "C++ Programming Project",
+                  "Hi Shubham,\n\nI was impressed with your ATM Machine Simulator and structured C++ logic. Let's connect!"
                 )}
                 className="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 hover:border-indigo-400 text-slate-300 text-[11px]"
               >
-                + Power BI Project
+                + C++ Project
               </button>
 
               <button
                 type="button"
                 onClick={() => handleTemplate(
-                  "C++ Software Discussion",
-                  "Hi Shakti,\n\nI was impressed with your Mini ATM System and structured C++ logic. Let's connect!"
+                  "Generative AI Collaboration",
+                  "Hi Shubham,\n\nWe noticed your Generative AI certification and problem-solving track record. Let's explore collaborating on a project."
                 )}
                 className="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 hover:border-violet-400 text-slate-300 text-[11px]"
               >
-                + C++ Project
+                + Generative AI Discussion
               </button>
             </div>
           </div>
@@ -265,7 +265,7 @@ export const Contact = ({ playSound, onShowToast }) => {
                 required
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                placeholder="Data Analyst Opportunity / Discussion"
+                placeholder="Web Development / C++ Opportunity"
                 className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white focus:border-indigo-500 focus:outline-none"
               />
             </div>
@@ -277,7 +277,7 @@ export const Contact = ({ playSound, onShowToast }) => {
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Hi Shakti, I'd like to discuss..."
+                placeholder="Hi Shubham, I'd like to discuss..."
                 className="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-white focus:border-indigo-500 focus:outline-none"
               ></textarea>
             </div>

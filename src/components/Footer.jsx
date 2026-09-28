@@ -30,10 +30,10 @@ export const Footer = ({ playSound }) => {
             {personalInfo.name}
           </div>
           <p className="text-slate-400 text-xs">
-            {education.institution}, Bhopal ({education.duration}) &bull; CGPA 5.57 / 10
+            B.Tech in Information Technology ({education.duration}) &bull; {education.status}
           </p>
           <p className="text-[11px] text-cyan-400/90 font-mono">
-            Frontend Development &bull; AI-Assisted Engineering &bull; C++ &bull; Power BI &bull; Oracle OCI
+            C++ &bull; Web Development (HTML, CSS, JS) &bull; Python &bull; Generative AI &bull; HackerRank
           </p>
         </div>
 
@@ -56,9 +56,9 @@ export const Footer = ({ playSound }) => {
       </div>
 
       <div className="max-w-6xl mx-auto mt-8 pt-4 border-t border-slate-900 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-500 text-[11px]">
-        <span>&copy; {new Date().getFullYear()} Shakti Singh Thakur. All rights reserved.</span>
+        <span>&copy; {new Date().getFullYear()} Shubham Rajpoot. All rights reserved.</span>
         <span className="text-slate-400 font-mono">
-          FRONTEND DEV &bull; USING AI &bull; C++ &bull; POWER BI &bull; ORACLE OCI
+          C++ &bull; PYTHON &bull; WEB DEV &bull; GENERATIVE AI &bull; HACKERRANK
         </span>
       </div>
     </footer>

@@ -1,70 +1,69 @@
 export const personalInfo = {
-  name: "Shakti Singh Thakur",
-  role: "Frontend Developer & Aspiring Data Analyst",
-  subRole: "AI-Assisted Engineering • C++ Systems • Power BI",
-  shortBio: "IT Student at Bansal Institute of Science & Technology specializing in Frontend Development (React, Modern JS, UI/UX), AI-driven workflows & prompt engineering, C/C++ systems, Power BI analytics, and Oracle Cloud Infrastructure (OCI).",
-  email: "ssthakur6262@gmail.com",
-  phone: "+91 6262079884",
-  location: "Bhopal, MP, India",
-  github: "https://github.com/Shaktithakur",
-  linkedin: "https://www.linkedin.com/in/shakti-singh--thakur",
+  name: "Shubham Rajpoot",
+  role: "IT Student | Web Developer & C++ Programmer",
+  subRole: "Web Development • C++ • Python • Generative AI",
+  shortBio: "Motivated and enthusiastic B.Tech Information Technology student with strong fundamentals in programming languages (C, C++, Python) and web development (HTML, CSS, JavaScript). Seeking opportunities to enhance technical skills, gain practical experience, and contribute to innovative projects.",
+  email: "shubhamrajpoot505@gmail.com",
+  phone: "+91 9301149634",
+  location: "Madhya Pradesh, India",
+  github: "https://github.com/shubhamrajpoot",
+  linkedin: "https://www.linkedin.com/in/shubham-rajpoot-b7b4a3365",
   resumeUrl: "/resume.pdf",
   profilePhoto: "/profile.png",
-  careerObjective: "To obtain a challenging Frontend Developer or Data Analyst position in a forward-thinking organization where I can leverage my modern web development skills, AI-assisted productivity, structured C++ programming, and data analytics."
+  careerObjective: "Motivated and enthusiastic B.Tech student with strong fundamentals in programming languages and web development. Seeking opportunities to enhance technical skills, gain practical experience, and contribute to innovative projects."
 };
 
 export const education = {
-  institution: "Bansal Institute of Science & Technology",
-  location: "Bhopal, Madhya Pradesh",
-  degree: "Bachelor of Technology (B.Tech) in Information Technology",
-  duration: "2024 – 2028",
-  status: "Undergraduate Cohort",
+  institution: "Bachelor of Technology (B.Tech)",
+  location: "Information Technology Department",
+  degree: "B.Tech in Information Technology",
+  duration: "Till 3rd Semester",
+  status: "CGPA: 6.0 / 10",
   highlights: [
-    "Frontend Web Development & Modern Component Architecture",
-    "Data Structures, Algorithms & Structured C/C++ Systems Logic",
-    "Database Management Systems & Business Intelligence Modeling",
-    "Cloud Computing & Oracle OCI Infrastructure"
+    "Core focus on Programming Languages: C, C++, Python",
+    "Frontend Web Development: HTML, CSS, Modern JavaScript",
+    "Data Structures, Algorithmic Logic & File Handling",
+    "Continuous Competitive Problem Solving on HackerRank & LeetCode"
   ]
 };
 
 export const skillCategories = [
   {
-    title: "Frontend Development",
-    icon: "Layout",
-    accent: "cyan",
-    skills: [
-      { name: "Frontend Engineering", level: 90, badge: "Core", detail: "Component-driven design, responsive layouts, modern interactive UI & state management" },
-      { name: "HTML5 & Modern CSS", level: 95, badge: "Mastery", detail: "Semantic web architecture, accessible markup, flexbox/grid, animations & glassmorphism" },
-      { name: "JavaScript (ES6+)", level: 85, badge: "Proficient", detail: "DOM manipulation, asynchronous operations, event architecture & dynamic data handling" }
-    ]
-  },
-  {
-    title: "AI Tools & Prompt Engineering",
-    icon: "Sparkles",
-    accent: "indigo",
-    skills: [
-      { name: "Using AI for Development", level: 92, badge: "Advanced", detail: "AI-assisted coding, LLM integration, workflow acceleration & automated problem solving" },
-      { name: "Prompt Engineering", level: 90, badge: "Specialist", detail: "Structured system prompting, context optimization, code generation & iterative refinement" },
-      { name: "AI Productivity Stack", level: 88, badge: "Modern", detail: "GitHub Copilot, Claude/GPT developer tooling, code auditing & automated testing" }
-    ]
-  },
-  {
-    title: "Systems Programming",
+    title: "Programming Languages",
     icon: "Code2",
     accent: "indigo",
     skills: [
-      { name: "C++ Programming", level: 85, badge: "Certified", detail: "OOP logic, memory manipulation, conditional flows & console system architecture" },
-      { name: "C Language", level: 80, badge: "Core", detail: "Pointers, procedural algorithms, structured logic and systems fundamentals" }
+      { name: "C++ Programming", level: 90, badge: "Advanced Core", detail: "Functions, conditional logic, file handling, class architecture & console systems" },
+      { name: "C Language", level: 85, badge: "Proficient", detail: "Procedural syntax, pointers, structured memory management & algorithm design" },
+      { name: "Python", level: 80, badge: "Intermediate", detail: "Clean scripting, automation, core data structures & problem solving" }
     ]
   },
   {
-    title: "Analytics & Cloud",
-    icon: "BarChart3",
+    title: "Web Development",
+    icon: "Layout",
+    accent: "cyan",
+    skills: [
+      { name: "HTML / HTML5", level: 95, badge: "Mastery", detail: "Semantic document structure, accessible markup & responsive layouts" },
+      { name: "CSS / Modern Styling", level: 88, badge: "Proficient", detail: "Flexbox, CSS Grid, animations, media queries & Neo-Brutalist UI" },
+      { name: "JavaScript (ES6+)", level: 82, badge: "Intermediate", detail: "DOM manipulation, event handling, dynamic UI rendering & local storage" }
+    ]
+  },
+  {
+    title: "Problem Solving & Platforms",
+    icon: "Terminal",
     accent: "violet",
     skills: [
-      { name: "Microsoft Power BI", level: 85, badge: "Certified", detail: "Interactive business intelligence dashboards, DAX calculations & data modeling" },
-      { name: "Oracle Cloud Infrastructure (OCI)", level: 80, badge: "Certified", detail: "Virtual Cloud Networks (VCN), compute infrastructure, storage & cloud security" },
-      { name: "Data Validation & Hygiene", level: 90, badge: "Core Discipline", detail: "Strict input sanitization, error boundaries, edge-case checking & data integrity" }
+      { name: "HackerRank Platform", level: 88, badge: "Certified", detail: "Problem Solving Certificate (March 2025), data structures & algorithmic logic" },
+      { name: "LeetCode Practice", level: 85, badge: "Active", detail: "Continuous practice on arrays, strings, two pointers, hashing & recursion" }
+    ]
+  },
+  {
+    title: "AI Tools & Certifications",
+    icon: "Sparkles",
+    accent: "indigo",
+    skills: [
+      { name: "Generative AI", level: 90, badge: "Certified (June 2025)", detail: "Prompt engineering, LLM-assisted workflows, code prototyping & productivity tools" },
+      { name: "CodeAlpha Certified", level: 88, badge: "Verified", detail: "Practical software tasks, structured project submissions & web deliveries" }
     ]
   }
 ];
@@ -72,80 +71,78 @@ export const skillCategories = [
 export const projects = [
   {
     id: "mini-atm",
-    title: "Mini ATM System",
+    title: "ATM Machine Simulator",
     subtitle: "C++ Console Application",
     type: "Featured C++ System",
     category: "Systems & Security Logic",
-    description: "Developed a secure console-based Mini ATM system simulating banking operations including PIN authentication, cash withdrawal, deposit management, and balance inquiries using structured C++ programming logic and strict data validation.",
-    githubUrl: "https://github.com/Shaktithakur",
-    tags: ["C++", "Data Validation", "OOP", "Security Logic", "CLI Architecture"],
+    description: "Developed a console-based ATM Machine Simulator in C++. Implemented core features including PIN validation, balance inquiry, cash withdrawal, deposit engine, and transaction management using functions, conditional logic, and file handling.",
+    githubUrl: "https://github.com/shubhamrajpoot",
+    tags: ["C++", "Functions", "Conditional Logic", "File Handling", "PIN Validation"],
     hasLiveDemo: true,
     features: [
-      { title: "PIN Authentication", desc: "Multi-attempt credential verification with security lockout protocol." },
-      { title: "Cash Withdrawal", desc: "Real-time balance checks, boundary validation & overdraft prevention." },
-      { title: "Deposit Management", desc: "Positive numeric data validation and immediate ledger recalculation." },
-      { title: "Balance Inquiries", desc: "Formatted monetary reporting and live ledger state tracking." }
+      { title: "PIN Validation", desc: "Multi-attempt security authentication with account lockout handling." },
+      { title: "Cash Withdrawal", desc: "Real-time balance checks and boundary validation preventing overdrafts." },
+      { title: "Deposit Engine", desc: "Strict positive numeric input validation and immediate balance updates." },
+      { title: "File Handling", desc: "Session tracking, transaction management, and persistent ledger logs." }
     ]
   },
   {
     id: "sales-dashboard",
-    title: "Interactive Sales & Data Analytics Dashboard",
+    title: "Interactive Web Analytics Dashboard",
     subtitle: "Frontend Web Application",
-    type: "Frontend & Data Analytics",
+    type: "Frontend Web Application",
     category: "Web & Data Visualization",
-    description: "Built an interactive web analytics dashboard converting raw sales datasets into actionable business intelligence. Features live KPI metric cards, dynamic category charts, date range filtering, and clean responsive data tables.",
-    githubUrl: "https://github.com/Shaktithakur",
-    tags: ["Frontend", "HTML5", "Modern CSS", "JavaScript", "Data Visualization", "Responsive UI"],
+    description: "Engineered a responsive frontend data dashboard that converts datasets into interactive metrics. Includes real-time KPI counter cards, interactive search filters, dynamic category breakdowns, and a mobile-optimized responsive layout.",
+    githubUrl: "https://github.com/shubhamrajpoot",
+    tags: ["HTML", "CSS", "JavaScript", "Frontend Dev", "Responsive UI"],
     hasLiveDemo: true,
     features: [
-      { title: "Live KPI Cards", desc: "Tracks total revenue, order volume, and average order value with trend indicators." },
-      { title: "Dynamic Visual Charts", desc: "Visual bar charts and progress breakdowns representing sales distribution." },
-      { title: "Search & Filter Engine", desc: "Fast client-side dataset filtering by product category, date, and status." },
-      { title: "Responsive Layout", desc: "Adaptive mobile and desktop viewports built with semantic HTML5 and clean CSS." }
+      { title: "Dynamic Search & Filters", desc: "Fast client-side dataset filtering by category, date, and keyword." },
+      { title: "Live KPI Metrics", desc: "Displays revenue, orders, and averages with visual trend indicators." },
+      { title: "Responsive Layout", desc: "Optimized display across desktop and smartphone viewports." }
     ]
   },
   {
     id: "student-tracker",
-    title: "Student Academic & Attendance Tracker",
-    subtitle: "Frontend Web Portal",
-    type: "Frontend Web Application",
+    title: "Student Academic & Task Portal",
+    subtitle: "Interactive Web Application",
+    type: "Web Application",
     category: "Web Development",
-    description: "Engineered a practical frontend web application for university students to track semester coursework, subject-wise attendance percentages, and internal marks with strict input validation and local persistence.",
-    githubUrl: "https://github.com/Shaktithakur",
-    tags: ["Frontend Dev", "HTML5", "CSS3", "JavaScript", "Local Storage", "Responsive UI"],
+    description: "Designed and built an interactive task and coursework management web application for college students. Implemented input validation, subject score calculations, persistent local storage, and clean Neo-Brutalist design tokens.",
+    githubUrl: "https://github.com/shubhamrajpoot",
+    tags: ["Web Dev", "HTML5", "CSS3", "JavaScript", "Local Storage"],
     hasLiveDemo: true,
     features: [
-      { title: "Attendance Threshold Calculator", desc: "Real-time status check calculating margin required to maintain 75% attendance." },
-      { title: "Coursework & Marks Tracker", desc: "Dynamic subject entry with weighted score calculation and status flags." },
-      { title: "Instant Persistence", desc: "Automated browser local state synchronization ensuring zero data loss on refresh." },
-      { title: "Responsive Design", desc: "Optimized mobile-friendly user experience across all smartphone and laptop displays." }
+      { title: "Attendance Margin Calculator", desc: "Real-time status check calculating margin required for target attendance." },
+      { title: "Coursework Persistence", desc: "Automated browser local state synchronization ensuring zero data loss on refresh." },
+      { title: "Form Validation", desc: "Input sanitization preventing empty or invalid submissions." }
     ]
   }
 ];
 
 export const certifications = [
   {
-    title: "Oracle Cloud Infrastructure (OCI) Foundations",
-    issuer: "Oracle University",
-    date: "Nov 2025",
-    color: "violet",
-    credentialId: "OCI-FND-2025",
-    skills: ["Cloud Architecture", "Compute & Storage", "Networking & VCN", "Cloud Security"]
-  },
-  {
-    title: "Microsoft Power BI Data Analyst Specialization",
-    issuer: "Microsoft / Coursera",
-    date: "Nov 2024",
-    color: "cyan",
-    credentialId: "MS-PBI-4902",
-    skills: ["DAX Queries", "Data Modeling", "Executive Dashboards", "ETL Pipelines"]
-  },
-  {
-    title: "C++ Programming Masterclass",
-    issuer: "Udemy",
-    date: "Nov 2024",
+    title: "Generative AI Certification",
+    issuer: "Specialization Certificate",
+    date: "June 2025",
     color: "indigo",
-    credentialId: "UC-CPP-8812",
-    skills: ["Object-Oriented Programming", "Memory Management", "Pointers", "Data Validation"]
+    credentialId: "GENAI-2025-JUN",
+    skills: ["Prompt Engineering", "LLM Workflows", "AI-Assisted Coding", "Automated Debugging"]
+  },
+  {
+    title: "Problem Solving Certificate",
+    issuer: "HackerRank",
+    date: "March 2025",
+    color: "purple",
+    credentialId: "HR-PS-MAR-2025",
+    skills: ["Data Structures", "Algorithms", "Conditional Logic", "Complexity Analysis"]
+  },
+  {
+    title: "CodeAlpha Certificate",
+    issuer: "CodeAlpha",
+    date: "2025",
+    color: "cyan",
+    credentialId: "CA-DEV-2025",
+    skills: ["Web Development", "Practical Projects", "Code Submissions", "Software Architecture"]
   }
 ];

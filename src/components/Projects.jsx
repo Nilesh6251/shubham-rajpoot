@@ -46,7 +46,7 @@ export const Projects = ({ playSound }) => {
       playSound?.(800, 'sine', 0.15);
       setIsAuthenticated(true);
       setAttempts(0);
-      addLog('[AUTH SUCCESS] PIN Verified. Welcome, Shakti Singh Thakur!', 'success');
+      addLog('[AUTH SUCCESS] PIN Verified. Welcome, Shubham Rajpoot!', 'success');
       addLog('[MENU] Ready. Select: Check Balance | Withdraw | Deposit | Logout', 'info');
     } else {
       playSound?.(250, 'sawtooth', 0.2);
